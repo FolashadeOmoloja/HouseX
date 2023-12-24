@@ -1,8 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter,Patua_One, Sniglet} from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
+const patua_one = Patua_One({
+  subsets: ['latin'],
+  weight: '400',
+  style: ['normal']
+})
+const sniglet = Sniglet({
+  subsets: ['latin'],
+  weight: ['400', '800']
+})
 
 export const metadata: Metadata = {
   title: 'HouseX',
