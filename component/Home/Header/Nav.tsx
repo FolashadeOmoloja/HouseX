@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const Nav = () => {
+const NavBar = () => {
   return (
     <nav>
                         
@@ -17,4 +17,4 @@ const Nav = () => {
   )
 }
 
-export default Nav
+export default NavBar
