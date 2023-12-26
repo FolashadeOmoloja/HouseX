@@ -5,9 +5,7 @@ const Header = () => {
   return (
     <header>
         <MaxWidthWrapper >
-             <NavBar>
-                
-             </NavBar>
+             <NavBar/>
         </MaxWidthWrapper>
         <section>
 
