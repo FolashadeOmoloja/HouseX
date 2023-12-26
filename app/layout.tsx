@@ -25,8 +25,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-         <main>
+      <body className={patua_one.className}>
+         <main >
              {children}
          </main>
       </body>

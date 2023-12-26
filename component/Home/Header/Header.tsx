@@ -4,8 +4,11 @@ import NavBar from './Nav'
 const Header = () => {
   return (
     <header>
-        <MaxWidthWrapper >
-             <NavBar/>
+        <MaxWidthWrapper className='first-headersection flex'>
+             {/* <NavBar/> */}
+             <div className='w-9 h-7 bg-red-600'>
+                hi
+             </div>
         </MaxWidthWrapper>
         <section>
 

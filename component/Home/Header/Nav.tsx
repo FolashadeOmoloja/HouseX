@@ -3,10 +3,9 @@ import React from 'react'
 
 const NavBar = () => {
   return (
-    <nav>
-                        
-      <ul className="flex justify-between">
-          <li id="logo"> <h2>H<img src="home.png" alt=""/>useX</h2></li>
+    <nav>                     
+      <ul className="flex justify-between text-sm">
+          <li className='flex'> <h2>H<img src="home.png" alt="" className='w-4 h-4'/>useX</h2></li>
           <li className="list-item">Properties</li>
           <li className="list-item">Buyers</li>
           <li className="list-item">Sellers</li>
