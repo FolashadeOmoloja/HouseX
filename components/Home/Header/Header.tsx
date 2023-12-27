@@ -8,7 +8,7 @@ const Header = () => {
         <section className='first-headersection basis-3/5'>
              <NavBar/>
         </section>
-        <section className='basis-2/5 bg-cover bg-no-repeat' style={{backgroundImage: `url('wallpaper.jpg')`}}>
+        <section className='basis-2/5 bg-cover bg-no-repeat bg-[#5E686A]' style={{backgroundImage: `url('wallpaper.jpg')`}}>
              <Login/>
         </section>
     </header>
