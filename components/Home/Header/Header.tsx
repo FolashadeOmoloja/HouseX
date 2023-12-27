@@ -8,7 +8,7 @@ const Header = () => {
         <MaxWidthWrapper className='first-headersection basis-3/5'>
              <NavBar/>
         </MaxWidthWrapper>
-        <section>
+        <section className='basis-2/5'>
              <Login/>
         </section>
     </header>
