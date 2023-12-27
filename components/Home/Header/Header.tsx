@@ -4,7 +4,7 @@ import Login from './Login'
 
 const Header = () => {
   return (
-    <header className='flex'>
+    <header className='flex md:h-[100vh]'>
         <section className='first-headersection basis-3/5'>
              <NavBar/>
         </section>
