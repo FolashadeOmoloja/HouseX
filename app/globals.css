@@ -15,11 +15,11 @@
     @apply items-center justify-center
   }
   .list-item{
-    @apply pt-[3px]
+    @apply pt-[3px] hover:text-[#E9EDEC] transition ease-in
   }
 
   .nav{
-    @apply border-b border-[#969b9c] h-[70px] p-0 m-0 text-[15px] flex items-center
+    @apply border-b border-[#969b9c] h-[70px] p-0 m-0  flex items-center
   }
 }
 .first-headersection{
