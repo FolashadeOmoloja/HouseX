@@ -5,10 +5,10 @@ import Login from './Login'
 const Header = () => {
   return (
     <header className='flex'>
-        <MaxWidthWrapper className='first-headersection basis-3/5'>
+        <section className='first-headersection basis-3/5'>
              <NavBar/>
-        </MaxWidthWrapper>
-        <section className='basis-2/5'>
+        </section>
+        <section className='basis-2/5 bg-cover bg-no-repeat' style={{backgroundImage: `url('wallpaper.jpg')`}}>
              <Login/>
         </section>
     </header>

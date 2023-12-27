@@ -15,11 +15,11 @@
     @apply items-center justify-center
   }
   .list-item{
-    @apply flex items-center
+    @apply pt-[3px]
   }
 
   .nav{
-    @apply border-b border-[#969b9c] h-[70px] p-0 m-0 text-[15px] flex items-center
+    @apply border-b border-[#969b9c] h-[70px] p-0 m-0 text-[15px] flex items-center shadow-md
   }
 }
 .first-headersection{
