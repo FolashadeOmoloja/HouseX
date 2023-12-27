@@ -2,7 +2,10 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <nav className='flex gap-8'>
+        <button>Login</button>
+        <button>Sign Up</button>
+    </nav>
   )
 }
 
