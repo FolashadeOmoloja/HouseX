@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter,Patua_One, Sniglet} from 'next/font/google'
+import { Inter,Patua_One, Sniglet, PT_Serif} from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -12,6 +12,13 @@ const sniglet = Sniglet({
   subsets: ['latin'],
   weight: ['400', '800']
 })
+const ptSerif = PT_Serif(
+  {
+    subsets: ['latin'],
+    weight: ['400', '700'],
+    variable: '--font-ptSerif'
+  }
+)
 
 export const metadata: Metadata = {
   title: 'HouseX',
@@ -25,6 +32,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+        <head>
+          <style>{`
+            :root {
+              ${ptSerif.style}
+            }
+          `}</style>
+      </head>
       <body className={patua_one.className}>
          <main >
              {children}
