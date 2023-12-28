@@ -23,10 +23,14 @@
   }
 }
 .first-headersection{
-  background: linear-gradient(90deg, hsla(189, 12%, 78%, 1) 0%, hsla(190, 6%, 39%, 1) 100%);
+  background: linear-gradient(90deg, #c0ccce 0%, #5d6769 100%);
 
 }
 
 .box-shadow{
   box-shadow: 0px 2px 0px rgba(0,0,0,0.5);
+}
+
+.background-position{
+  background-position: right -320px top 0
 }
