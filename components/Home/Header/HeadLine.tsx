@@ -16,9 +16,9 @@ const HeadLine = () => {
          <br /> <span className='text-black'>Home</span> at the best prices</h1>
          <h2 className='mt-10'>Discover a place you would love to live</h2>
          <p>Connect with more than 75 million renters looking for new homes<br/>using our comprehensive marketing platform</p>
-         <section className=''>
+         <section className='mt-8'>
              <div className='w-14 h-14 bg-white text-[#c0ccce] flex div-center rounded-2xl'>
-              <div className='w-11 h-11 bg-[#5d6769] rounded-2xl flex div-center'><FaSearchLocation/></div>
+              <div className='w-11 h-11 bg-[#5d6769] rounded-2xl flex div-center text-[20px]'><FaSearchLocation/></div>
              </div>
          </section>
     </section>
