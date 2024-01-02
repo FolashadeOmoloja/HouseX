@@ -12,11 +12,12 @@ const SearchBar = () => {
     <section className='flex w-full pl-3 div-center'>
         <div className='basis-[33.33%]'>
         <label htmlFor="property" className='ml-1'>Property Type</label>
-             <select name="properties" id="property" className='flex'>
+             <select name="properties" id="property" className='flex outline-none text-[#8e9e9d] italic'>
+                 <option className=''>Select Property Type</option>
                   {
                     properties.map((item,idx)=>{
                       return <option value={item.value} key={idx}
-                      className=''
+                      className='text-black'
                       >{item.options}
                       </option>
                     })
