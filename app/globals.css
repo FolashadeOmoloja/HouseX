@@ -11,6 +11,9 @@
 }
 
 @layer components{
+  .headersection-gradient{
+   @apply bg-gradient-to-r from-[#7e9999] to-[#c3d4cc]
+  }
   .div-center{
     @apply items-center justify-center
   }
@@ -25,10 +28,10 @@
     @apply border-b border-[#969b9c] h-[70px] p-0 m-0  flex items-center
   }
 }
-.first-headersection{
+/* .first-headersection{
   background: linear-gradient(90deg, #8C9D9B 0%, #7E999A 100%);
 
-}
+} */
 
 .box-shadow{
   box-shadow: 0px 2px 0px rgba(0,0,0,0.5);
