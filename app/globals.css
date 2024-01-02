@@ -27,11 +27,12 @@
   .nav{
     @apply border-b border-[#969b9c] h-[70px] p-0 m-0  flex items-center
   }
-}
-/* .first-headersection{
-  background: linear-gradient(90deg, #8C9D9B 0%, #7E999A 100%);
 
-} */
+  .maxmin-input{
+   @apply w-[80px] border-[#7e9999] border mb-2 outline-none
+  }
+}
+
 
 .box-shadow{
   box-shadow: 0px 2px 0px rgba(0,0,0,0.5);
