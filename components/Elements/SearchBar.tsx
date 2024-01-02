@@ -30,7 +30,7 @@ const SearchBar = () => {
         <MinMaxDropdown/>
     </section>
 
-    <div className='w-14 h-full bg-white text-[#c3d4cc] flex div-center rounded-2xl'>
+    <div className='w-14 h-full bg-white text-white flex div-center rounded-2xl'>
         <section className='w-11 h-11 bg-[#7e9999] rounded-2xl flex div-center text-[20px]'>
             <FaSearchLocation/>
         </section>

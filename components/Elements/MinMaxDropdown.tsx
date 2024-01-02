@@ -21,7 +21,7 @@ const MinMaxDropdown = () => {
   return (
     <div>
       <label htmlFor="price">Price Range</label>
-      <div className="relative inline-block">
+      <div className="relative ">
         <button
           onClick={toggleDropdown}
           className="w-32 h-14 border-[#7e9999] border text-left pl-2 pr-8"
