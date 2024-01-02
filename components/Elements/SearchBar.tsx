@@ -1,29 +1,41 @@
 'use client'
+import { properties } from '@/Constants'
 import { useState } from 'react'
 import { FaSearchLocation } from 'react-icons/fa'
+import MinMaxDropdown from './MinMaxDropdown'
+
+
 
 const SearchBar = () => {
   return (
-    <div className='w-14 h-14 bg-white text-[#c3d4cc] flex div-center rounded-2xl transtion ease duration-500'>
-    <section className='w-11 h-11 bg-[#7e9999] rounded-2xl flex div-center text-[20px]'>
-        <section>
-
-        </section>
-        <section>
+ <section className='h-14 bg-white transtion ease duration-500 flex rounded-2xl justify-between'>
+    <section className='flex'>
         <div>
         <label htmlFor="property">Property Type</label>
-             <select name="properties" id="property">
-                 <option value="residential">Residential House</option>
-                 <option value="apartment">Apartments</option>
-                 <option value="commercial">Commercial Building</option>
-                 <option value="condo">Condominium</option>
-                 <option value="land">TownHouse</option>
+             <select name="properties" id="property" className='flex'>
+                  {
+                    properties.map((item,idx)=>{
+                      return <option value={item.value} key={idx}
+                      className=''
+                      >{item.options}
+                      </option>
+                    })
+                  }
              </select>
         </div>
-        </section>
-        <FaSearchLocation/>
+        <div className='flex flex-col'>
+            <label htmlFor="location">Location</label>
+            <input type="text" />
+        </div>
+        <MinMaxDropdown/>
     </section>
-   </div>
+
+    <div className='w-14 h-full bg-white text-[#c3d4cc] flex div-center rounded-2xl'>
+        <section className='w-11 h-11 bg-[#7e9999] rounded-2xl flex div-center text-[20px]'>
+            <FaSearchLocation/>
+        </section>
+    </div>
+ </section>
   )
 }
 

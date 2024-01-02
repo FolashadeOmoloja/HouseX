@@ -1,4 +1,4 @@
-const properties = [
+export const properties = [
     {value:'residential', options:'Residential House'},
     {value:'apartment', options:'Apartments'},
     {value:'commercial', options:'Commercial Building'},
