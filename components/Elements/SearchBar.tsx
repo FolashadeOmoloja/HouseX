@@ -8,10 +8,10 @@ import MinMaxDropdown from './MinMaxDropdown'
 
 const SearchBar = () => {
   return (
- <section className='h-14 bg-white transtion ease duration-500 flex rounded-2xl justify-between'>
-    <section className='flex'>
-        <div className='basis-1/4'>
-        <label htmlFor="property">Property Type</label>
+ <section className='h-14 bg-white transtion ease duration-500 flex rounded-2xl  text-[13px] max-w-[580px]'>
+    <section className='flex w-full pl-3 div-center'>
+        <div className='basis-[33.33%]'>
+        <label htmlFor="property" className='ml-1'>Property Type</label>
              <select name="properties" id="property" className='flex'>
                   {
                     properties.map((item,idx)=>{
@@ -23,17 +23,17 @@ const SearchBar = () => {
                   }
              </select>
         </div>
-        <div className='flex flex-col basis-1/4'>
+        <div className='flex flex-col basis-[33.33%]'>
             <label htmlFor="location">Location</label>
-            <input type="text" />
+            <input type="text" placeholder='Select a Location' className='text-[#8e9e9d] italic outline-none'/>
         </div>
-        <div className='basis-1/4'>
+        <div className='basis-[33.33%]'>
         <MinMaxDropdown/>
         </div>
     </section>
 
-    <div className='w-14 h-full bg-white text-white flex div-center rounded-2xl basis-1/4'>
-        <section className='w-11 h-11 bg-[#7e9999] rounded-2xl flex div-center text-[20px]'>
+    <div className='w-14 h-full bg-white text-white flex div-center rounded-xl '>
+        <section className='w-10 h-10 bg-[#7e9999] rounded-xl flex div-center text-[20px]'>
             <FaSearchLocation/>
         </section>
     </div>

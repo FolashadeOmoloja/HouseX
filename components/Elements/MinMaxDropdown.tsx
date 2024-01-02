@@ -24,21 +24,21 @@ const MinMaxDropdown = () => {
       <div className="relative ">
         <button
           onClick={toggleDropdown}
-          className="w-40 h-6 border-[#7e9999] border text-left"
+          className="w-40 h-6 text-left overflow-x-hidden italic text-[#8e9e9d]"
         >
           {minPrice && maxPrice
             ? `${minPrice} - ${maxPrice}`
             : 'Select Price Range'}
         </button>
         {isDropdownOpen && (
-          <div className="absolute top-16 left-0 w-32 bg-white border border-gray-300 ">
+          <div className="absolute top-12 left-[-40%]  bg-white rounded-xl ">
             <div className="flex gap-2 p-2">
               <label htmlFor="minPrice">Min</label>
               <input
                 type="number"
                 id="minPrice"
                 name="minPrice"
-                className="w-[80px] border-[#7e9999] border mb-2 outline-none"
+                className="maxmin-input"
                 value={minPrice}
                 onChange={handleMinPriceChange}
               />
@@ -47,7 +47,7 @@ const MinMaxDropdown = () => {
                 type="number"
                 id="maxPrice"
                 name="maxPrice"
-                className="w-full border-[#7e9999] border"
+                className="maxmin-input"
                 value={maxPrice}
                 onChange={handleMaxPriceChange}
               />

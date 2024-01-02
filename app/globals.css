@@ -29,7 +29,7 @@
   }
 
   .maxmin-input{
-   @apply w-[80px] border-[#7e9999] border mb-2 outline-none
+   @apply w-[80px] border-[#7e9999] border outline-none
   }
 }
 
