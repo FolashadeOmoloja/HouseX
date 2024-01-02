@@ -5,3 +5,10 @@ export const properties = [
     {value:'condo', options:'Condominium'},
     {value:'townHouse', options:'TownHouse'},
 ]
+
+export const popularSearches = [
+    'Resident House',
+    'Studio Apartment',
+    'Ikoyi',
+    'Lekki'
+]
