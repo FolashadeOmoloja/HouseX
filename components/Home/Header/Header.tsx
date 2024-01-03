@@ -5,12 +5,12 @@ import HeadLine from './HeadLine'
 
 const Header = () => {
   return (
-    <header className='flex xlg:h-[100vh] headersection-gradient'>
+    <header className='flex xlg:h-[100vh] headersection-gradient max-xslg:flex-col div-center'>
         <section className=' basis-3/5'>
              <NavBar/>
              <HeadLine/>
         </section>
-        <section className='basis-2/5 bg-cover bg-no-repeat  background-position' style={{backgroundImage: `url('wallpaper.png')`}}>
+        <section className='basis-2/5 bg-cover bg-no-repeat  background-position max-xslg:hidden ' style={{backgroundImage: `url('wallpaper.png')`}}>
              <Login/>
         </section>
     </header>
