@@ -21,7 +21,7 @@
     @apply px-2.5 md:px-20 
   }
   .list-item{
-    @apply pt-[3px] hover:text-[#E9EDEC] transition ease-in
+    @apply pt-[3px] hover:text-[#E9EDEC] transition ease-in 
   }
 
   .nav{
