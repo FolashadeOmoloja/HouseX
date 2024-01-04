@@ -13,12 +13,12 @@ const ptSerif = PT_Serif(
 
 const HeadLine = () => {
   return (
-    <section className='maxWidthWrapper py-20 max-xxlg:p-[52px]'>
+    <section className='maxWidthWrapper py-20 max-xxlg:p-[52px] max-xslg:div-center flex-col max-xslg:text-center max-w-[100vw]'>
          <h1 className={`${ptSerif.className} text-[44px] text-white font-bold`}>Sell or rent your
          <br /> <span className='text-black'>Home</span> at the best prices</h1>
          <p className='mt-5'>
          HouseX streamlines rental management in Africa, offering free listings, flexible payments, and automated tools for renters and landlords. Discover your ideal home and connect with millions through our robust marketing platform.</p>
-         <section className='mt-8'>
+         <section className='mt-8 text-left '>
              <SearchBar/>
          </section>
          <section className='flex mt-10 gap-2'>

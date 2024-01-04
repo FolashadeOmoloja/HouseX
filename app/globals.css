@@ -15,7 +15,7 @@
    @apply bg-gradient-to-r from-[#7e9999] to-[#c3d4cc]
   }
   .div-center{
-    @apply items-center justify-center
+    @apply flex items-center justify-center
   }
   .maxWidthWrapper{
     @apply px-2.5 md:px-20 
