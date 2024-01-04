@@ -7,11 +7,11 @@ import MinMaxDropdown from './MinMaxDropdown'
 
 
 const SearchBar = () => {
-    const [maxWidth, setMaxWidth] = useState('max-w-14')
-    const [displayOpt, setDisplayOpt] = useState('hidden w-0')
+    const [maxWidth, setMaxWidth] = useState('max-w-14 max-slg:max-w-[580px] max-sm:max-w-[400px]')
+    const [displayOpt, setDisplayOpt] = useState('hidden w-0 max-slg:flex max-slg:w-full')
 
     const slideOut = () => {
-         if(maxWidth === 'max-w-14'){
+         if(maxWidth === 'max-w-14 max-slg:max-w-[580px] max-sm:max-w-[400px]'){
 
             setMaxWidth('max-w-[580px] ')
             setTimeout(() => {
@@ -19,15 +19,15 @@ const SearchBar = () => {
               }, 500);
           
          } else{
-             setDisplayOpt('hidden w-0')
-            setMaxWidth('max-w-14')
+             setDisplayOpt('hidden w-0 max-slg:flex max-slg:w-full')
+            setMaxWidth('max-w-14 max-slg:max-w-[580px] max-sm:max-w-[400px]')
            
          }
     } 
   return (
  <section className={`relative h-14 bg-white transtion ease duration-500 flex rounded-2xl  text-[13px] ${maxWidth}`}>
 
-    <section className={`${displayOpt}   pl-3 div-center transtion ease duration-500`}>
+    <section className={`${displayOpt}   pl-3 div-center transtion ease duration-500 `}>
         <div className='basis-[33.33%]'>
         <label htmlFor="property" className='ml-1'>Property Type</label>
              <select name="properties" id="property" className='flex outline-none text-[#8e9e9d] italic'>
@@ -46,7 +46,7 @@ const SearchBar = () => {
             <label htmlFor="location">Location</label>
             <input type="text" placeholder='Select a Location' className='text-[#8e9e9d] italic outline-none'/>
         </div>
-        <div className='basis-[33.33%]'>
+        <div className='basis-[33.33%] max-sm:hidden'>
         <MinMaxDropdown/>
         </div>
     </section>
