@@ -31,6 +31,10 @@
   .maxmin-input{
    @apply w-[80px] border-[#7e9999] border outline-none
   }
+
+  .slider-search{
+    @apply max-w-14 max-slg:max-w-[580px] max-sm:max-w-[400px] max-xxsm:max-w-[320px]
+  }
 }
 
 
