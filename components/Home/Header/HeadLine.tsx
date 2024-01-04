@@ -21,9 +21,9 @@ const HeadLine = () => {
          <section className='mt-8 text-left '>
              <SearchBar/>
          </section>
-         <section className='flex mt-10 gap-2'>
-          <span>Popular Search: </span>
-          <div className='flex gap-3 max-md:flex-wrap'>
+         <section className='flex mt-10 gap-2 max-sm:flex-col'>
+          <span className='max-md:mb-1'>Popular Search: </span>
+          <div className='flex gap-3 max-md:flex-wrap max-sm:justify-center'>
             {
               popularSearches.map((item, idx)=>{
                 return <span className='text-sm px-2 py-1 rounded-lg bg-[#ffffff73]' key={idx}>{item}</span>
