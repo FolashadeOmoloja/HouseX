@@ -25,7 +25,7 @@ const SearchBar = () => {
          }
     } 
   return (
- <section className={`relative h-14 bg-white transtion ease duration-500 flex rounded-2xl  text-[13px] ${maxWidth}`}>
+ <section className={`relative h-14 bg-white transtion ease duration-500 flex rounded-2xl  text-[13px] max-xxsl:text-[11px] max-xxsm:text-xs ${maxWidth}`}>
 
     <section className={`${displayOpt}   pl-3 div-center transtion ease duration-500 `}>
         <div className='basis-[33.33%] '>
