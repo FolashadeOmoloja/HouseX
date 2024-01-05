@@ -14,7 +14,7 @@ const NavBar = () => {
           <li className="list-item max-xslg:hidden"><Link href={'#'}>Valuation</Link></li>
           <li className="list-item max-xslg:hidden"><Link href={'#'}>Contact</Link></li>
       </ul>
-      <section className='basis-2/5 '>
+      <section className='basis-2/5 max-xslg:hidden'>
       <Login/>
       </section>
     </nav>
