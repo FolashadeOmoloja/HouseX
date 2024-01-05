@@ -13,7 +13,7 @@ const ptSerif = PT_Serif(
 
 const HeadLine = () => {
   return (
-    <section className='maxWidthWrapper py-20 max-xxlg:p-[52px] max-md:p-8 max-xsm:p-4 max-xslg:div-center flex-col max-xslg:text-center max-w-[100vw]'>
+    <section className='maxWidthWrapper  max-xslg:div-center flex-col max-xslg:text-center max-w-[100vw]'>
          <h1 className={`${ptSerif.className} text-[44px] text-white font-bold max-xsm:text-[32px]`}>Sell or rent your
          <br /> <span className='text-black'>Home</span> at the best prices</h1>
          <p className='mt-5'>

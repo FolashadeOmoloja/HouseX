@@ -18,7 +18,7 @@
     @apply flex items-center justify-center
   }
   .maxWidthWrapper{
-    @apply px-2.5 md:px-20 
+    @apply px-2.5 md:px-20 py-20 max-xxlg:p-[52px] max-md:p-8 max-xsm:p-4
   }
   .list-item{
     @apply pt-[3px] hover:text-[#E9EDEC] transition ease-in 
