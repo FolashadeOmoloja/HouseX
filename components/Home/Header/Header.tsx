@@ -6,13 +6,14 @@ import HeadLine from './HeadLine'
 const Header = () => {
   return (
     <header className='xlg:h-[100vh]  mx-auto'>
+                       <NavBar/>
        <section className='flex  w-full max-xslg:flex-col'>
            <section className=' basis-3/5'>
-                 <NavBar/>
+
                  <HeadLine/>
             </section>
             <section className='basis-2/5 bg-cover bg-no-repeat  background-position max-xslg:hidden ' style={{backgroundImage: `url('wallpaper.png')`}}>
-                 <Login/>
+                 {/* <Login/> */}
             </section>
            </section>
     </header>
