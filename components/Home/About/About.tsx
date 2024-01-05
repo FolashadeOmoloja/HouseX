@@ -2,9 +2,15 @@ import React from 'react'
 
 const About = () => {
   return (
-    <section>
-        
-    </section>
+    <main>
+        <section className='flex'>
+            <h2></h2>
+            <span></span>
+        </section>
+        <section>
+
+        </section>
+    </main>
   )
 }
 
