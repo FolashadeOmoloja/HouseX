@@ -4,7 +4,9 @@ import Image from 'next/image'
 export default function Home() {
   return (
     <main className="">
-        <Header/>     
+        <section className='headersection-gradient'>
+          <Header/>
+        </section>     
     </main>
   )
 }

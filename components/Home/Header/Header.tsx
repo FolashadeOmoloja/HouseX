@@ -5,7 +5,7 @@ import HeadLine from './HeadLine'
 
 const Header = () => {
   return (
-    <header className='xlg:h-[100vh] headersection-gradient max-w-[1440px] mx-auto'>
+    <header className='xlg:h-[100vh] max-w-[1440px] mx-auto'>
        <section className='flex  w-full max-xslg:flex-col'>
            <section className=' basis-3/5'>
                  <NavBar/>
