@@ -1,3 +1,4 @@
+import About from '@/components/Home/About/About'
 import Header from '@/components/Home/Header/Header'
 import Image from 'next/image'
 
@@ -6,7 +7,8 @@ export default function Home() {
     <main className="">
         <section className='headersection-gradient'>
           <Header/>
-        </section>     
+        </section>
+        <About/>   
     </main>
   )
 }
