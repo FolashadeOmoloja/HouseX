@@ -25,7 +25,7 @@
   }
 
   .nav{
-    @apply border-b border-[#969b9c] h-[70px] p-0 m-0  flex items-center
+    @apply border-b border-[#c3d4cc] h-[70px] p-0 m-0  flex items-center
   }
 
   .maxmin-input{
@@ -39,7 +39,7 @@
 
 
 .box-shadow{
-  box-shadow: 0px 2px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 2px 0px rgba(126, 153, 153, 0.8);
 }
 
 .background-position{
