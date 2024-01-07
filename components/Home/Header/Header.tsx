@@ -2,11 +2,12 @@ import MaxWidthWrapper from '@/components/Elements/MaxWidthWrapper'
 import NavBar from './Nav'
 import Login from './Login'
 import HeadLine from './HeadLine'
+import MobileNav from './MobileNav'
 
 const Header = () => {
   return (
     <header className=' mx-auto'>
-                       <NavBar/>
+                       <NavBar/>         
        <section className='flex  w-full max-xslg:flex-col'>
            <section className=' basis-3/5'>
 
