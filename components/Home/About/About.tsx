@@ -11,8 +11,13 @@ const About = () => {
                <div className='h-[300px] w-[250px] bg-[#e3e8e8] relative slanted-div rounded-2xl  z-1'>
                  <div className='absolute top-0 right-0 w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#e3e8e8]'></div>
                  <div className='absolute bottom-0 left-0 w-[80px] h-[80px] border-b-[80px] border-b-white border-r-[80px] border-r-[#e3e8e8]'></div>
+                 <div className='bg-[#e3e8e8] h-[70px] w-4 rounded-[20px] rotate-[135deg] absolute bottom-[-4px] left-[15px]'></div>
+                 <div className='text-contents div-center'>
+                  <span className='font-semibold'>17k+</span>
+
+                 </div>
                </div>
-               <div className='bg-[#e3e8e8] h-[70px] w-4 rounded-[20px] rotate-[137deg] absolute'></div>
+            
         </section>
     </main>
   )
