@@ -46,6 +46,15 @@
   background-position: right -320px top 0
 }
 
+/* .slanted-div:before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  border-top: 80px solid white;
+  border-left: 80px solid #e3e8e8;
+  width: 0;
+} */
+
 .ptSerifFont{
   font-family: var(--font-ptSerif);
 }
