@@ -1,9 +1,9 @@
 import React from 'react'
 
 interface IProp {
-    background: string;
-    text: string;
-    title: string;
+    background?: string;
+    text?: string;
+    title?: string;
   }
   
 
