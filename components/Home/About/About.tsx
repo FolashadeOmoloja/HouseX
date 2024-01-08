@@ -20,8 +20,8 @@ const About = () => {
               <span>Years of Experience</span>
            </div>
         </div>
-            <ShapedBox title='7+' text='Awards'/>
-            <ShapedBox title='13K+' text='Properties ollection'/>
+            <ShapedBox title='7+' text='Awards Won'/>
+            <ShapedBox title='13K+' text='Properties collection'/>
         </section>
 
 
