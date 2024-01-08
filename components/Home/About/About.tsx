@@ -8,13 +8,14 @@ const About = () => {
             <p className='text-sm text-[#4b5456] basis-2/5'>Your cutting-edge real estate marketplace that offers a seamless and immersive experience for finding your dream home. A safespace for Landlords to enlist their properties and verify potential buyers or renters. </p>
         </section>
         <section className='mt-14 '>
-               <div className='h-[270px] w-[230px] bg-[#c3d4cc] relative slanted-div rounded-2xl  z-1'>
-                 <div className='outer-box absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#c3d4cc]'>
-                       <div className='inner-box w-[80px] h-[80px] bg-transparent border border-t-white border-r-white absolute top-0 right-0'>        
-                       </div>
+               <div className='h-[270px] w-[230px] bg-[#c3d4cc] relative slanted-div  rounded-2xl  z-1'>
+                 <div className='absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#c3d4cc] '>
                  </div>
-                 <div className='absolute bottom-0 left-0 w-[80px] h-[80px] border-b-[80px] border-b-white border-r-[80px] border-r-[#c3d4cc]'></div>
-                 <div className='bg-[#c3d4cc] h-[70px] w-4 rounded-[20px] rotate-[135deg] absolute bottom-[-4px] left-[15px]'></div>
+                 <div className='absolute bottom-0 left-0 w-[80px] h-[80px] border-b-[80px] border-b-white border-r-[80px] border-r-[#c3d4cc] '></div>
+                 <div className='slanted-div2'>
+
+                 </div>
+                 <div className='bg-[#c3d4cc] h-[70px] w-4 rounded-[20px] rotate-[135deg] z-10 absolute bottom-[-4px] left-[15px]'></div>
                  <div className='text-contents div-center h-full flex-col'>
                   <span className='font-semibold text-3xl'>17k+</span>
                   <span>satisfied customers</span>
@@ -22,6 +23,7 @@ const About = () => {
                  </div>
                </div>
         </section>
+
 
     </main>
   )

@@ -46,14 +46,26 @@
   background-position: right -320px top 0
 }
 
-/* .slanted-div:before {
+.slanted-div:before {
   content: '';
   position: absolute;
-  top: 0; right: 0;
-  border-top: 80px solid white;
-  border-left: 80px solid #e3e8e8;
-  width: 0;
-} */
+  top: -2px; right: -2px;
+  border-top: 3px solid white;
+  border-right:3px solid white;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+}
+
+.slanted-div2 {
+  position: absolute;
+  bottom: -2px; left: -2px;
+  border-bottom: 3px solid white;
+  border-left:3px solid white;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+}
 
 .ptSerifFont{
   font-family: var(--font-ptSerif);
