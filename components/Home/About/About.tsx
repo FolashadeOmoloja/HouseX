@@ -1,5 +1,6 @@
 import { GoArrowUpRight } from "react-icons/go"
 import ShapedBox from '../../Elements/ShapedBox'
+import Login from "../Header/Login"
 
 const About = () => {
   return (
@@ -9,7 +10,7 @@ const About = () => {
             <p className=' text-[#4b5456] basis-2/5'>Your cutting-edge real estate marketplace that offers a seamless and immersive experience for finding your dream home. A safespace for Landlords to enlist their properties and verify potential buyers or renters. </p>
         </section>
         <section className='flex justify-between mt-14 max-xlg:flex-col max-xlg:gap-16'>
-             <section className='flex gap-5 max-slg:flex-wrap max-slg:justify-center basis-1/2'>
+             <section className='flex gap-5 xlg:flex-wrap max-slg:flex-wrap max-slg:justify-center basis-1/2'>
                  <ShapedBox/>
                  <div className={`h-[270px] w-[230px] bg-[#4b5456] relative slanted-div  rounded-2xl  z-1`}>
                 <div className={`absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#c3d4cc] `}></div>
@@ -58,6 +59,9 @@ const About = () => {
                       <img src="House1.jpg" alt="img" className="h-full" />
                  </div>
              </section>
+             <div className="sm:hidden mt-5">
+                    <Login display="hidden"/>
+             </div>
              </article>
         </section>
     </main>

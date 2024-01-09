@@ -1,9 +1,14 @@
 import React from 'react'
 
-const Login = () => {
+interface Iprop{
+  display?:string,
+  width?:string
+}
+
+const Login:React.FC<Iprop> = ({display='', width}) => {
   return (
     <section className='flex gap-8  pr-2.5 md:pr-20 justify-end  max-md:flex-col'>
-        <button className='list-item'>Login</button>
+        <button className={`list-item ${display}`}>Login</button>
         <button className="relative inline-flex items-center justify-center p-4 px-6 py-[10px] overflow-hidden font-medium  transition duration-300 ease-out border-2 hover:text-[#5d7b7d] rounded-full shadow-md group">
               <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black duration-300 -translate-x-full bg-[#5d7b7de] group-hover:translate-x-0 ease gap-2">
                   <span>Sign Up</span>
