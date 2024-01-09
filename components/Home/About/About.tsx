@@ -8,7 +8,7 @@ const About = () => {
             <h2 className='basis-3/5 text-[40px] max-slg:text-3xl  max-xsm:text-2xl'>Your Trusted Real Estate <br className='max-xslg:hidden' /> Marketplace</h2>
             <p className=' text-[#4b5456] basis-2/5'>Your cutting-edge real estate marketplace that offers a seamless and immersive experience for finding your dream home. A safespace for Landlords to enlist their properties and verify potential buyers or renters. </p>
         </section>
-        <section className='flex justify-between mt-14 '>
+        <section className='flex justify-between mt-14 max-xlg:flex-col'>
              <section className='flex gap-5 flex-wrap basis-1/2'>
                  <ShapedBox/>
                  <div className={`h-[270px] w-[230px] bg-[#4b5456] relative slanted-div  rounded-2xl  z-1`}>
