@@ -29,16 +29,16 @@ const About = () => {
                 <p>We have witnessed the ever-evolving landscape of the real estate market and become a trusted partner to thousands of clients</p>
                 <p>Pioneering real estate leaders, trusted for personalized service and innovation.</p>
                 <div className='w-[120px] h-[120px] bg-[#7e9999] rounded-full text-white div-center relative'>
-                    <div className="absolute">
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlLang="en" viewBox="0 0 300 300" width={200} className="">
+                    <div className="absolute top-[-15px] right-[-27px]">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlLang="en" viewBox="0 0 300 300" width={180}>
                             <title>Contact Us</title>
                             <defs>
                                <path id="smallTextCircle" d="M150,200 a75,75 0 0,1 0,-150a75,75 0 0,1 0,150Z" transform="rotate (12,150,150)" />
                             </defs>
-                            <g className="smallTextCircle text-white">
-                            <text textLength='470' fontSize={14}  className="text-white">
-                               <textPath xlinkHref="#smallTextCircle" aria-label="Contact us" textLength={470} className="text-white">
-                                   Contact Us | Contact Us | 
+                            <g className="smallTextCircle">
+                            <text textLength='470' fontSize={14} fill="white"  fontWeight={'bold'}>
+                               <textPath xlinkHref="#smallTextCircle" aria-label="Contact us" textLength={470} >
+                                   Contact Us - Contact Us -&nbsp; 
                                </textPath>
                             </text>
                             </g>
@@ -54,8 +54,7 @@ const About = () => {
                  <div className={`h-full w-full bg-[#4b5456] relative   rounded-2xl  z-1`}>
                        <div className={`absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-[#c3d4cc] border-l-[80px] border-l-[#4b5456] `}></div>
                        <div className={`absolute bottom-0 left-0 w-[80px] h-[80px] border-b-[80px] border-b-[#c3d4cc] border-r-[80px] border-r-[#4b5456]`}></div>
-                      
-    
+                       <div className={`bg-[#4b5456] h-[70px] w-4 rounded-[20px] rotate-[135deg] z-10 absolute bottom-[-4px] left-[15px]`}></div>
                       <img src="House1.jpg" alt="img" className="h-full" />
                  </div>
              </section>
