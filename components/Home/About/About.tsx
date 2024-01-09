@@ -12,8 +12,8 @@ const About = () => {
              <section className='flex gap-5 flex-wrap basis-1/2'>
                  <ShapedBox/>
                  <div className={`h-[270px] w-[230px] bg-[#4b5456] relative slanted-div  rounded-2xl  z-1`}>
-                <div className={`absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#4b5456] `}></div>
-                <div className={`absolute bottom-0 left-0 w-[80px] h-[80px] border-b-[80px] border-b-white border-r-[80px] border-r-[#4b5456]`}></div>
+                <div className={`absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#c3d4cc] `}></div>
+                <div className={`absolute bottom-0 left-0 w-[80px] h-[80px] border-b-[80px] border-b-white border-r-[80px] border-r-[#c3d4cc]`}></div>
                 <div className='slanted-div2'></div>
                 <div className={`bg-[#4b5456] h-[70px] w-4 rounded-[20px] rotate-[135deg] z-10 absolute bottom-[-4px] left-[15px]`}></div>
                 <div className='text-contents div-center h-full flex-col text-white'>
