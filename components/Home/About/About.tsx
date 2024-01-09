@@ -28,7 +28,22 @@ const About = () => {
               <div className='basis-1/2  text-[#4b5456] flex flex-col justify-between'>
                 <p>We have witnessed the ever-evolving landscape of the real estate market and become a trusted partner to thousands of clients</p>
                 <p>Pioneering real estate leaders, trusted for personalized service and innovation.</p>
-                <div className='w-[120px] h-[120px] bg-[#7e9999] rounded-full text-white div-center'>
+                <div className='w-[120px] h-[120px] bg-[#7e9999] rounded-full text-white div-center relative'>
+                    <div className="absolute">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlLang="en" viewBox="0 0 300 300" width={200} className="">
+                            <title>Contact Us</title>
+                            <defs>
+                               <path id="smallTextCircle" d="M150,200 a75,75 0 0,1 0,-150a75,75 0 0,1 0,150Z" transform="rotate (12,150,150)" />
+                            </defs>
+                            <g className="smallTextCircle text-white">
+                            <text textLength='470' fontSize={14}  className="text-white">
+                               <textPath xlinkHref="#smallTextCircle" aria-label="Contact us" textLength={470} className="text-white">
+                                   Contact Us | Contact Us | 
+                               </textPath>
+                            </text>
+                            </g>
+                        </svg>
+                    </div>
                      <span className="text-4xl"><GoArrowUpRight /></span>
                      
                 </div>
@@ -46,23 +61,6 @@ const About = () => {
              </section>
              </article>
         </section>
-      <svg xmlns="http://www.w3.org/2000/svg" xmlLang="en" viewBox="0 0 300 300" width={200} className="">
-  <title>Contact Us</title>
-  <defs>
-    <path id="smallTextCircle" d="M150,200 a75,75 0 0,1 0,-150a75,75 0 0,1 0,150Z" transform="rotate (12,150,150)" />
-  </defs>
-  <g className="smallTextCircle text-white">
-    <text textLength='470' fontSize={14}  className="text-white">
-      <textPath xlinkHref="#smallTextCircle" aria-label="Contact us" textLength={470} className="text-white">
-        Contact Us | Contact Us | 
-      </textPath>
-    </text>
-  </g>
-</svg>
-
- 
-         
-
     </main>
   )
 }
