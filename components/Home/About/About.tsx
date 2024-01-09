@@ -25,7 +25,7 @@ const About = () => {
                  <ShapedBox title='7+' text='Awards Won'/>
                  <ShapedBox title='13K+' text='Properties collection'/>
              </section>
-             <article className='basis-1/2 flex bg-[#c3d4cc] p-7 rounded-[20px] h-[400px] self-end gap-3 max-sm:flex-col'>
+             <article className='basis-1/2 flex bg-[#c3d4cc] p-7 max-xsm:p-4 rounded-[20px] h-[400px] self-end gap-3 max-sm:flex-col'>
               <div className='basis-1/2  text-[#4b5456] flex flex-col justify-between max-sm:text-center max-sm:gap-5'>
                 <p>We have witnessed the ever-evolving landscape of the real estate market and become a trusted partner to thousands of clients</p>
                 <p>Pioneering real estate leaders, trusted for personalized service and innovation.</p>
