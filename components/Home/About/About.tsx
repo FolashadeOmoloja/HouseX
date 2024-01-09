@@ -8,8 +8,8 @@ const About = () => {
             <h2 className='basis-3/5 text-[40px] max-slg:text-3xl  max-xsm:text-2xl'>Your Trusted Real Estate <br className='max-xslg:hidden' /> Marketplace</h2>
             <p className=' text-[#4b5456] basis-2/5'>Your cutting-edge real estate marketplace that offers a seamless and immersive experience for finding your dream home. A safespace for Landlords to enlist their properties and verify potential buyers or renters. </p>
         </section>
-        <section className='flex justify-between mt-14 max-xlg:flex-col'>
-             <section className='flex gap-5 flex-wrap basis-1/2'>
+        <section className='flex justify-between mt-14 max-xlg:flex-col max-xlg:gap-16'>
+             <section className='flex gap-5 max-slg:flex-wrap max-slg:justify-center basis-1/2'>
                  <ShapedBox/>
                  <div className={`h-[270px] w-[230px] bg-[#4b5456] relative slanted-div  rounded-2xl  z-1`}>
                 <div className={`absolute top-0 right-0  w-[80px] h-[80px] border-t-[80px] border-t-white border-l-[80px] border-l-[#c3d4cc] `}></div>
@@ -24,11 +24,11 @@ const About = () => {
                  <ShapedBox title='7+' text='Awards Won'/>
                  <ShapedBox title='13K+' text='Properties collection'/>
              </section>
-             <article className='basis-1/2 flex bg-[#c3d4cc] p-7 rounded-[20px] h-[400px] self-end gap-3'>
-              <div className='basis-1/2  text-[#4b5456] flex flex-col justify-between'>
+             <article className='basis-1/2 flex bg-[#c3d4cc] p-7 rounded-[20px] h-[400px] self-end gap-3 max-sm:flex-col'>
+              <div className='basis-1/2  text-[#4b5456] flex flex-col justify-between max-sm:text-center max-sm:gap-5'>
                 <p>We have witnessed the ever-evolving landscape of the real estate market and become a trusted partner to thousands of clients</p>
                 <p>Pioneering real estate leaders, trusted for personalized service and innovation.</p>
-                <div className='w-[120px] h-[120px] bg-[#7e9999] rounded-full text-white div-center relative'>
+                <div className='w-[120px] h-[120px] bg-[#7e9999] rounded-full text-white div-center relative max-sm:hidden'>
                     <div className="absolute top-[-15px] right-[-27px]">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlLang="en" viewBox="0 0 300 300" width={180}>
                             <title>Contact Us</title>
