@@ -4,6 +4,8 @@ const Footer = () => {
   return (
  <main>
     Footer
+    Footer
+    Footer
  </main>
   )
 }
