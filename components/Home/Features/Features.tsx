@@ -4,13 +4,21 @@ const Features = () => {
   return (
    <main className='maxWidthWrapper bg-[#f3f6fd]'>
         <h3 className='text-[40px] max-slg:text-3xl  max-xsm:text-2xl'>Looking to rent or lease an apartment? <br className='max-xslg:hidden' /> We’ve got you covered.</h3>
-        <section className='mt-12'>
+        <section className='mt-12 flex gap-5'>
                   <div className=' uppercase flex flex-col gap-7 text-[17px]'>
                     
                      <div className='pl-3 border-l-[#7e9999] border-l-4 hover:text-[#7e9999] cursor-pointer transition'>For Renters</div>
                      <div className='pl-3 border-l-[#7e9999] border-l-4 hover:text-[#7e9999] cursor-pointer transition'>For Sellers</div>
                   </div>
+                  <section>
+                         <div className='bg-red-300 h-[500px] w-[350px] rounded-[20px] relative'>
+                                <div className='bg-blue-300 absolute top-0 left-0 w-5 h-32 rotate-[45deg]'></div>
+                                <div className='bg-yellow-300'></div>
+                         </div>
+                        
+                  </section>
         </section>
+        <div className="triangle"></div>
    </main>
   )
 }

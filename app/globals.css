@@ -72,3 +72,17 @@
 }
 
 
+.triangle {
+  width: 10px;
+  height: 10px;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 87px solid #ff0000; /* Change color as needed */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
