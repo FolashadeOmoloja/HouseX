@@ -11,7 +11,7 @@ const Features = () => {
                      <div className='pl-3 border-l-[#7e9999] border-l-4 hover:text-[#7e9999] cursor-pointer transition'>For Sellers</div>
                   </div>
                   <section>
-                         <div className='bg-red-300 h-[500px] w-[350px] rounded-[20px] relative'>
+                         <div className='bg-red-300 h-[450px] w-[400px] rounded-[20px] relative'>
                          <div className="right-angle-triangle absolute left-0 top-0"> </div>   
                          <div className="right-angle-bottom-triangle absolute bottom-0 right-0"> </div>  
                          </div>
