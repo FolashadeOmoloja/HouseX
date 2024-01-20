@@ -20,7 +20,7 @@ const MinMaxDropdown = () => {
 
   return (
     <div>
-      <label>Price Range</label>
+      <span className='block'>Price Range</span>
       <div className="relative ">
         <button
           onClick={toggleDropdown}
