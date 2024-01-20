@@ -12,9 +12,10 @@ const Features = () => {
                   </div>
                   <section>
                          <div className='bg-red-300 h-[500px] w-[350px] rounded-[20px] relative'>
-                               
+                         <div className="right-angle-triangle absolute left-0 top-0"> </div>   
+                         <div className="right-angle-bottom-triangle absolute bottom-0 right-0"> </div>  
                          </div>
-                         <div className="right-angle-triangle"> </div>
+                       
                         
                   </section>
         </section>

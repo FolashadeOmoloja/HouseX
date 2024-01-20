@@ -71,15 +71,24 @@
   font-family: var(--font-ptSerif);
 }
 
+.right-angle-bottom-triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-bottom: 100px solid #f3f6fd; 
 
+
+}
 
 
 
 .right-angle-triangle {
   width: 0;
   height: 0;
-  border-left: 50px solid transparent;
-  border-bottom: 87px solid red; 
+  border-left: 100px solid transparent;
+  border-bottom: 100px solid #f3f6fd; 
+ rotate: 180deg;
+
 }
 
 
