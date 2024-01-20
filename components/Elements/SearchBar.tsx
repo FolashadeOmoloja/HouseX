@@ -44,7 +44,7 @@ const SearchBar = () => {
         </div>
         <div className='flex flex-col basis-[33.33%]'>
             <label htmlFor="location">Location</label>
-            <input type="text" placeholder='Select a Location' className='text-[#8e9e9d] italic outline-none'/>
+            <input type="text" id='location' placeholder='Select a Location' className='text-[#8e9e9d] italic outline-none'/>
         </div>
         <div className='basis-[33.33%] max-sm:hidden'>
         <MinMaxDropdown/>
