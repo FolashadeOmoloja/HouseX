@@ -12,9 +12,13 @@ const Features = () => {
                   </div>
                   <section>
                          <div className='bg-red-300 h-[450px] w-[400px] rounded-[20px] relative'>
-                         <div className="right-angle-triangle absolute left-0 top-0"> </div>   
-                         <div className="right-angle-bottom-triangle absolute bottom-0 right-0"> </div> 
-                         <div className='w-0 h-0 border-l-[130px] border-l-transparent border-b-[130px] border-b-[#7e9999] absolute bottom-0 right-0 rounded-br-[20px]'></div> 
+                             <div className="right-angle-triangle absolute left-0 top-0"> </div>   
+                             <div className="right-angle-bottom-triangle absolute bottom-0 right-0"> </div> 
+                             <div className='w-0 h-0 border-l-[130px] border-l-transparent border-b-[130px] border-b-[#7e9999]  rounded-br-[20px] absolute bottom-0 right-0'>
+                             </div> 
+                             <div className='w-0 h-0 border-l-[115px] border-l-transparent border-b-[115px] border-b-[#f3f6fd] rounded-br-[20px] absolute bottom-[4px] right-[4.7px]'>
+                               <p>hi</p>
+                             </div>
                          </div>
                        
                         
