@@ -14,9 +14,12 @@ const Features = () => {
                   <section className="flex justify-between basis-[80%] ">
                       <div className="w-[400px]">
                           <ImgShapeBox/>
-                          <div className="flex">
-                             <CgMenuGridR className='text-[#7e9999]'/>
-                             <p className="text-xs">Effortless apartment hunting in Nigeria! Explore our curated listings, pick your perfect space, and enjoy flexible payment options—monthly, quarterly, or annually. No inspections, agency fees, or legal hassles. Simply pay and move in!</p>
+                          <div className="mt-8">
+                             <div className="flex items-center gap-3 mb-2">
+                                 <CgMenuGridR className='text-[#7e9999]'/>
+                                 <span>MarketPlace</span>
+                             </div>
+                             <p className="text-sm">Effortless apartment hunting in Nigeria! Explore our curated listings, pick your perfect space, and enjoy flexible payment options—monthly, quarterly, or annually. No inspections, agency fees, or legal hassles. Simply pay and move in!</p>
                           </div>
                       </div>
                         <div className="w-[400px]">
