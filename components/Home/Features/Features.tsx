@@ -1,5 +1,5 @@
 import { ImgShapeBox } from "@/components/Elements/ShapedBox";
-
+import { CgMenuGridR } from "react-icons/cg";
 
 const Features = () => {
   return (
@@ -12,10 +12,17 @@ const Features = () => {
                      <div className='pl-3 border-l-[#7e9999] border-l-4 hover:text-[#7e9999] cursor-pointer transition'>For Sellers</div>
                   </div>
                   <section className="flex justify-between basis-[80%] ">
-                      <div>
+                      <div className="w-[400px]">
                           <ImgShapeBox/>
+                          <div className="flex">
+                             <CgMenuGridR className='text-[#7e9999]'/>
+                             <p className="text-xs">Effortless apartment hunting in Nigeria! Explore our curated listings, pick your perfect space, and enjoy flexible payment options—monthly, quarterly, or annually. No inspections, agency fees, or legal hassles. Simply pay and move in!</p>
+                          </div>
                       </div>
-                      <ImgShapeBox img="tenets.png"/>
+                        <div className="w-[400px]">
+                            <ImgShapeBox img="tenets.png"/>
+                        </div>
+                      
                   </section>
         </section>
       

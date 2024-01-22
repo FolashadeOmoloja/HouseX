@@ -33,7 +33,7 @@ export default ShapedBox
 
 export const ImgShapeBox:React.FC<IBox> = ({img='house-img1.png'}) => {
   return (
-    <div className='headersection-gradient h-[450px] w-[400px] rounded-[20px] relative'>
+    <div className='headersection-gradient h-[450px] w-full rounded-[20px] relative'>
         <img src={img} alt="img" className="w-full h-full rounded-[20px]" />
          <div className="right-angle-triangle absolute left-0 top-0"> </div>   
          <div className="right-angle-bottom-triangle absolute bottom-0 right-0"> </div> 
