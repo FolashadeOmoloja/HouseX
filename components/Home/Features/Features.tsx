@@ -4,7 +4,7 @@ const Features = () => {
   return (
    <main className='maxWidthWrapper bg-[#f3f6fd] text-[#4b5456]'>
         <h3 className='text-[40px] max-slg:text-3xl  max-xsm:text-2xl'>Looking to rent or lease an apartment? <br className='max-xslg:hidden' /> We’ve got you covered.</h3>
-        <section className='mt-12 flex gap-5'>
+        <section className='mt-12 flex gap-10'>
                   <div className=' uppercase flex flex-col gap-7 text-[17px] '>
                     
                      <div className='pl-3 border-l-[#7e9999] border-l-4 hover:text-[#7e9999] cursor-pointer transition'>For Renters</div>
