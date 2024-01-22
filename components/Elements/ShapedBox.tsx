@@ -5,6 +5,10 @@ interface IProp {
     text?: string;
     title?: string;
   }
+
+  interface IBox {
+      img?:string
+  } 
   
 
 const ShapedBox:React.FC<IProp> = ({background='#c3d4cc',text='satisfied customers',title="17k+"}) => {
@@ -24,3 +28,10 @@ const ShapedBox:React.FC<IProp> = ({background='#c3d4cc',text='satisfied custome
 }
 
 export default ShapedBox
+
+
+export const ImgShapeBox:React.FC<IBox> = ({img}) => {
+  return (
+    <div>ShapedBox</div>
+  )
+}
