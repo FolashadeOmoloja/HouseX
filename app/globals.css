@@ -37,9 +37,11 @@
   }
 
   .features-switch{
-    @apply xslg:pl-3 border-[#7e9999] xlg:border-l-4 hover:text-[#7e9999] cursor-pointer transition max-xlg:border-none
-    max-slg:text-sm  }
-
+    @apply xslg:pl-3 border-[#7e9999] xlg:border-l-4 hover:text-[#7e9999] cursor-pointer transition  max-xlg:border max-slg:text-sm  max-xlg:px-4 max-xlg:py-2 max-xlg:border-none}
+    
+    .features-switch-active{
+      @apply bg-[#7e9999]   text-[#f3f6fd] max-xlg:rounded-3xl  transition-all
+    }
   .features-header{
     @apply flex items-center gap-3 mb-2 cursor-pointer max-xlg:justify-center
   }
