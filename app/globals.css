@@ -37,8 +37,8 @@
   }
 
   .features-switch{
-    @apply pl-3 border-[#7e9999] xlg:border-l-4 hover:text-[#7e9999] cursor-pointer transition max-xlg:border-b-4
-  }
+    @apply xslg:pl-3 border-[#7e9999] xlg:border-l-4 hover:text-[#7e9999] cursor-pointer transition max-xlg:border-none
+    max-slg:text-sm  }
 
   .features-header{
     @apply flex items-center gap-3 mb-2 cursor-pointer max-xlg:justify-center
