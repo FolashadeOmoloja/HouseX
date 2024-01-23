@@ -13,7 +13,7 @@ const Features = () => {
                   </div>
                       <section className="flex xslg:justify-between basis-[80%] flex-wrap justify-center max-xslg:gap-8">
                           <div className="w-[400px]">
-                              <ImgShapeBox/>
+                              <ImgShapeBox img="sellers1.jpg"/>
                               <div className="mt-8">
                                  <div className="features-header">
                                      <CgMenuGridR className='text-[#7e9999]'/>

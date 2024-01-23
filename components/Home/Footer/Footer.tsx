@@ -2,11 +2,18 @@ import React from 'react'
 
 const Footer = () => {
   return (
- <main>
-    Footer
-    Footer
-    Footer
- </main>
+     <footer>
+            <main>
+                <section>
+                      <span>HouseX</span>
+                      <p>YOUR BEST <br /> REAL ESTATE <br /> MARKETPLACE</p>
+                </section>
+                <section>
+
+                </section>
+            </main>
+
+     </footer>
   )
 }
 
