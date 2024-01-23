@@ -35,6 +35,10 @@
   .slider-search{
     @apply max-w-14 max-slg:max-w-[580px] max-sm:max-w-[400px] max-xxsm:max-w-[320px]
   }
+
+  .features-switch{
+    @apply pl-3 border-[#7e9999] xlg:border-l-4 hover:text-[#7e9999] cursor-pointer transition max-xlg:border-b-4
+  }
 }
 
 
