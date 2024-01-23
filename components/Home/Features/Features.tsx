@@ -11,7 +11,7 @@ const Features = () => {
                      <div className='features-switch features-switch-active'>For Renters</div>
                      <div className='features-switch '>For Sellers</div>
                   </div>
-                      <section className="flex xlg:justify-between basis-[80%] flex-wrap justify-center max-xslg:gap-8">
+                      <section className="flex xslg:justify-between basis-[80%] flex-wrap justify-center max-xslg:gap-8">
                           <div className="w-[400px]">
                               <ImgShapeBox/>
                               <div className="mt-8">
