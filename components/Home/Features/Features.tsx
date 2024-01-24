@@ -26,7 +26,7 @@ const Features = () => {
                       </section>
         </section>
         <div className=" mt-16">
-                    <Login display="hidden" cta="Get Started" justifyEnd={false} width="w-[300px]"/>
+                    <Login display="hidden" cta="Get Started" justifyEnd={false} width="md:w-[300px] w-full"/>
         </div>
    </main>
   )

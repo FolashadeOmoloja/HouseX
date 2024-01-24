@@ -60,7 +60,7 @@ const About = () => {
                  </div>
              </section>
              <div className="sm:hidden mt-5">
-                    <Login display="hidden"/>
+                    <Login display="hidden" justifyEnd={false}/>
              </div>
              </article>
         </section>
