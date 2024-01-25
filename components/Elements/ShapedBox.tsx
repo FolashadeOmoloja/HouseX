@@ -35,7 +35,7 @@ export const ImgShapeBox:React.FC<IBox> = ({img='house-img1.png'}) => {
   return (
     <div className='headersection-gradient xxsm:h-[450px] h-[320px] w-full rounded-[20px] relative'>
         <img src={img} alt="img" className="w-full h-full rounded-[20px]" />
-         <div className="right-angle-triangle absolute left-0 top-0"> </div>   
+         <div className="right-angle-triangle absolute left-0 top-0 border-b-[100px] border-solid border-b-[#f3f6fd]"> </div>   
          <div className="right-angle-bottom-triangle absolute bottom-0 right-0"> </div> 
          <div  className='w-0 h-0 border-l-[130px] border-l-transparent border-b-[130px] border-b-[#7e9999]  rounded-br-[20px] absolute bottom-0 right-0'>
          </div> 

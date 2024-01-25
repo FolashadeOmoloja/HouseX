@@ -13,8 +13,14 @@ const Listings = () => {
             </div>
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
-         <section>
-          
+         <section className='mt-10'>
+              <section className='div-center gap-5'>
+                    <div className='h-[450px] w-[400px] relative rounded-[10px]'>
+                    <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
+                      <img src="circle2.jpg" alt="listing"  className='w-full h-full rounded-[10px]'/>
+                      <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
+                    </div>
+              </section>
          </section>
     </main>
   )
