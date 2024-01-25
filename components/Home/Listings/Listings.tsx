@@ -16,10 +16,15 @@ const Listings = () => {
          <section className='mt-10'>
               <section className='div-center gap-5'>
                     <div className='h-[450px] w-[400px] relative rounded-[10px]'>
-                    <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
-                      <img src="circle2.jpg" alt="listing"  className='w-full h-full rounded-[10px]'/>
-                      <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
-                    </div>
+                           <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
+                             <img src="circle2.jpg" alt="listing"  className='w-full h-full rounded-[10px]'/>
+                             <div className='w-[130px] h-[35px] bg-[#c3d4ccec] text-sm div-center skew-x-[30deg] rounded-lg relative bottom-1/2 mx-auto transition-all hover:headersection-gradient hover:text-white cursor-pointer'><span className='skew-x-[-30deg]'>View Details</span></div>
+                             
+                             <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
+                             <div className="w-0 h-0 border-l-[100px] border-l-transparent absolute left-0 bottom-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
+                             <div className={`headersection-gradient  h-[50px] w-4 rounded-[20px] rotate-[135deg] absolute bottom-[10px] left-[25px]`}></div>
+                           </div>
+
               </section>
          </section>
     </main>
