@@ -7,11 +7,14 @@ const Listings = () => {
          <section className='flex justify-between items-center'>
             <span>Your Housing solutions </span>
             <div className='flex items-center relative'>
-                <div className='w-14 h-14 rounded-full'><img src="circle2.jpg" alt="img" className='w-full h-full rounded-full relative right-[-20px]' /></div>
-                <div className='w-16 h-16 rounded-full'><img src="circle1.jpg" alt="img" className='w-full h-full rounded-full relative z-10' /></div>
-                <div className='w-14 h-14 rounded-full'><img src="circle3.jpg" alt="img" className='w-full h-full rounded-full relative right-[20px] z-1' /></div>
+                <div className='w-12 h-12 rounded-full'><img src="circle2.jpg" alt="img" className='w-full h-full rounded-full relative right-[-20px]' /></div>
+                <div className='w-[68px] h-[68px] rounded-full border-2 shadow-md'><img src="circle1.jpg" alt="img" className='w-full h-full rounded-full relative z-10 ' /></div>
+                <div className='w-12 h-12 rounded-full'><img src="circle3.jpg" alt="img" className='w-full h-full rounded-full relative right-[20px] z-1' /></div>
             </div>
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
+         </section>
+         <section>
+          
          </section>
     </main>
   )
