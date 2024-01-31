@@ -9,6 +9,7 @@ interface IProp {
 
   interface IBox {
       img?:string
+      key?:number
   } 
 
   interface IListing{
@@ -51,9 +52,9 @@ export const ImgShapeBox:React.FC<IBox> = ({img='house-img1.png'}) => {
 }
 
 
-export const ListingBox:React.FC<IBox> = ({img='circle2.jpg'}) => {
+export const ListingBox:React.FC<IBox> = ({img='circle2.jpg', key}) => {
   return (
-    <div className='h-[450px] w-[400px] relative rounded-[10px]'>
+    <div className='h-[450px] w-[400px] relative rounded-[10px]' key={key}>
     <div className="right-angle-triangle absolute right-0 top-0 rotate-[90deg] border-b-white border-b-[100px] border-solid "> </div> 
       <img src={img} alt="listing"  className='w-full h-full rounded-[10px]'/>
       <div className='w-[130px] h-[35px] bg-[#f3f6fdda] text-sm div-center skew-x-[30deg] rounded-lg relative bottom-1/2 mx-auto transition-all hover:headersection-gradient hover:text-white cursor-pointer'><span className='skew-x-[-30deg]'>View Details</span></div>    

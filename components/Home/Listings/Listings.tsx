@@ -1,6 +1,11 @@
 import { ListingBox } from '@/components/Elements/ShapedBox'
 import React from 'react'
 
+
+const ListingsItems = [
+  'circle2.jpg', 'circle1.jpg', 'circle3.jpg'
+]
+
 const Listings = () => {
   return (
     <main className='maxWidthWrapper  text-[#4b5456] max-xlg:text-center'>
@@ -16,9 +21,11 @@ const Listings = () => {
          </section>
          <section className='mt-10'>
               <section className='div-center gap-5'>
-                      <div>
-                          <ListingBox/>
-                      </div>
+                         {
+                          ListingsItems.map((item, idx)=>{
+                            return <ListingBox img={item} key={idx}/>
+                          })
+                         }
 
               </section>
          </section>
