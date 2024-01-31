@@ -3,7 +3,7 @@ import React from 'react'
 
 
 const ListingsItems = [
-  'circle2.jpg', 'circle1.jpg', 'circle3.jpg'
+  'circle2.jpg', 'circle1.jpg', 'circle3.jpg', 'circle2.jpg', 'circle1.jpg', 'circle3.jpg'
 ]
 
 const Listings = () => {
@@ -19,8 +19,8 @@ const Listings = () => {
             </div>
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
-         <section className='mt-10'>
-              <section className='div-center gap-5'>
+         <section className='mt-20'>
+              <section className='div-center gap-5 overflow-x-scroll'>
                          {
                           ListingsItems.map((item, idx)=>{
                             return <ListingBox img={item} key={idx}/>
