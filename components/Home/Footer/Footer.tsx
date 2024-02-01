@@ -5,7 +5,7 @@ const Footer = () => {
      <footer className='bg-[#f3f6fd] px-4'>
             <main className='bg-white rounded-3xl'>
                 <section>
-                      <span>HouseX</span>
+                      <span className='text-[24px] font-bold flex items-center '>H<img src="home.png" alt="" className='w-5 h-5 mb-[2px]'/>useX</span>
                       <p>YOUR BEST <br /> REAL ESTATE <br /> MARKETPLACE</p>
                 </section>
                 <section>

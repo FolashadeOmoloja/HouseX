@@ -14,7 +14,7 @@ export default function Home() {
         <About/> 
         <Features/>
         <Listings/>
-        {/* <Footer/>   */}
+        <Footer/>  
     </main>
   )
 }
