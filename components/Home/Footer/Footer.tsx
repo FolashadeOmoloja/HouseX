@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => {
   return (
      <footer className='bg-[#f3f6fd] px-4 mt-24'>
-            <main className='bg-white rounded-3xl maxWidthWrapper'>
+            <main className='bg-white rounded-3xl px-2.5 md:px-20 md:py-10 py-2.5'>
                 <section>
                       <span className='text-[24px] font-bold flex items-center '>H<img src="home.png" alt="" className='w-5 h-5 mb-[2px]'/>useX</span>
                       <p>YOUR BEST <br /> REAL ESTATE <br /> MARKETPLACE</p>
