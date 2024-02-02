@@ -1,9 +1,10 @@
+import { FaGithub, FaInstagram, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { MdCopyright } from "react-icons/md";
 
 const Footer = () => {
   return (
      <footer className='bg-[#f3f6fd] px-4 mt-24 text-[#4b5456] pt-20'>
-            <main className='bg-white rounded-3xl px-2.5 md:px-20 md:py-10 py-2.5 mx-auto h-[400px] flex justify-between'>
+            <main className='bg-white rounded-3xl px-2.5 md:px-20 md:py-10 py-2.5 mx-auto h-[400px] flex justify-between relative'>
                 <section className='flex flex-col h-full justify-between basis-1/2'>
                       <div>
                           <span className='text-[24px] font-bold flex items-center '>H<img src="home.png" alt="" className='w-5 h-5 mb-[2px]'/>useX</span>
@@ -37,6 +38,12 @@ const Footer = () => {
                              </button>
                           </form>
                       </div>
+                      <ul className="flex gap-5 items-center text-[#678788]">
+                         <li><a href="#"><FaInstagram /></a></li>
+                         <li><a href="#"><FaXTwitter /></a></li>
+                         <li><a href="#"><FaGithub /></a></li>
+                         <li><a href="#"><FaLinkedin /></a></li>
+                      </ul>
                 </section>
             </main>
 
