@@ -14,25 +14,27 @@ const Footer = () => {
                 <section className="basis-1/2 flex flex-col justify-between">
                       <div className="flex justify-between">
                          <ul className="flex flex-col gap-3">
-                            <li>Services</li>
-                            <li>Team</li>
-                            <li>Company</li>
+                            <li className="cursor-pointer">Services</li>
+                            <li className="cursor-pointer">Team</li>
+                            <li className="cursor-pointer">Company</li>
                          </ul>
                          <ul className="flex flex-col gap-3">
-                            <li>Contact</li>
-                            <li>Location</li>
+                            <li className="cursor-pointer">Contact</li>
+                            <li className="cursor-pointer">Location</li>
                          </ul>
                          <ul className="flex flex-col gap-3">
-                            <li>About</li>
-                            <li>Policy</li>
-                            <li>Headquarters</li>
+                            <li className="cursor-pointer">About</li>
+                            <li className="cursor-pointer">Policy</li>
+                            <li className="cursor-pointer">Headquarters</li>
                          </ul>
                       </div>
                       <div>
                           <p className="text-xs text-slate-500">Sign up for our newsletter</p>
                           <form className="flex mt-3">
-                             <input type="email" name="newsletter" id="newsletter" placeholder="YOUR EMAIL" className="outline-none h-12 bg-[#f3f6fd] px-3 w-full  rounded-l-lg"/>
-                             <button>SignUp</button>
+                             <input type="email" name="newsletter" id="newsletter" placeholder="YOUR EMAIL" className="outline-none h-12 bg-[#f3f6fd] px-3 w-full  rounded-l-lg basis-4/5"/>
+                             <button className="pl-4 pr-8 headersection-gradient text-white relative rounded-l-lg basis-1/5 transition hover:text-[#4b5456]">SignUp
+                             <div className="w-0 h-0 border-l-transparent border-l-[20px] absolute right-0 top-0 rotate-[270deg] border-b-white border-b-[20px] border-solid "> </div> 
+                             </button>
                           </form>
                       </div>
                 </section>
