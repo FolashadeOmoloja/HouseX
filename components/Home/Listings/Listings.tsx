@@ -10,7 +10,7 @@ const Listings = () => {
   return (
     <main className='maxWidthWrapper  text-[#4b5456] max-xlg:text-center'>
          <h2 className='text-[40px] max-slg:text-3xl  max-xsm:text-2xl text-transparent bg-clip-text headersection-gradient mb-10'>Our Top Deals & Best Listings</h2>
-         <section className='flex justify-between items-center'>
+         <section className='flex justify-between items-center max-slg:flex-col max-slg:gap-5'>
             <span>Your Housing solutions </span>
             <div className='flex items-center relative'>
                 <div className='w-12 h-12 rounded-full'><img src="circle2.jpg" alt="img" className='w-full h-full rounded-full relative right-[-20px]' /></div>
