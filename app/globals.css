@@ -47,7 +47,7 @@
   }
 
   .slider-icon{
-    @apply text-[#7e9999] absolute top-1/2 text-[44px] z-10  bg-white transition-all hover:text-[#c3d4cc] cursor-pointer
+    @apply text-[#7e9999] absolute top-1/2 text-[44px] z-10  bg-white transition-all hover:text-[#c3d4cc] cursor-pointer translate-y-[-]
   }
 }
 
@@ -94,14 +94,21 @@
 
 }
 
-
-
 .right-angle-triangle {
   width: 0;
   height: 0;
   border-left: 100px solid transparent;
  rotate: 180deg;
 
+}
+.slider-icon{
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  border-radius: 50%;
+}
+
+.slider-icon.active{
+transform: translateY(-50%) scale(0.9);
 }
 
 

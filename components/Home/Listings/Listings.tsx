@@ -21,7 +21,7 @@ const Listings = () => {
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
          <section className='mt-20 relative'>
-             <span className=' left-[-22px]  slider-icon'><FaChevronCircleLeft /></span>
+             <span className=' left-[-22px]  slider-icon active'><FaChevronCircleLeft /></span>
               <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
                          {
                           ListingsItems.map((item, idx)=>{
