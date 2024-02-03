@@ -20,8 +20,8 @@ const Listings = () => {
             </div>
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
-         <section className='mt-20'>
-             <span><FaChevronCircleLeft /></span>
+         <section className='mt-20 relative'>
+             <span className='text-[#7e9999] absolute left-[-70px] top-1/2 text-[100px]'><FaChevronCircleLeft /></span>
               <section className='div-center gap-5 overflow-x-scroll'>
                          {
                           ListingsItems.map((item, idx)=>{
@@ -30,7 +30,7 @@ const Listings = () => {
                          }
 
               </section>
-              <span><FaChevronCircleRight /></span>
+              <span className='text-[#7e9999] absolute right-0 top-1/2'><FaChevronCircleRight /></span>
          </section>
     </main>
   )
