@@ -22,7 +22,7 @@ const Listings = () => {
          </section>
          <section className='mt-20 relative'>
              <span className=' left-[-22px]  slider-icon'><FaChevronCircleLeft /></span>
-              <section className='div-center gap-5 overflow-x-scroll'>
+              <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
                          {
                           ListingsItems.map((item, idx)=>{
                             return <ListingBox img={item} key={idx}/>

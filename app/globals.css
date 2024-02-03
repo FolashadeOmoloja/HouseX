@@ -47,7 +47,7 @@
   }
 
   .slider-icon{
-    @apply text-[#7e9999] absolute top-1/2 text-[44px] z-10  bg-white transition-all hover:text-[#c3d4cc]
+    @apply text-[#7e9999] absolute top-1/2 text-[44px] z-10  bg-white transition-all hover:text-[#c3d4cc] cursor-pointer
   }
 }
 
