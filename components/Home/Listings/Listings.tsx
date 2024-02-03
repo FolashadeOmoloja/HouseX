@@ -31,8 +31,8 @@ const Listings = () => {
 
               </section>
               
-              <FaChevronCircleRight className=' right-[-22px] slider-icon'/>
-              
+              <FaChevronCircleRight className=' right-[-22px] slider-icon active'/>
+
          </section>
     </main>
   )
