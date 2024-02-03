@@ -1,5 +1,6 @@
 import { ListingBox } from '@/components/Elements/ShapedBox'
 import React from 'react'
+import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
 
 
 const ListingsItems = [
@@ -20,6 +21,7 @@ const Listings = () => {
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
          <section className='mt-20'>
+             <span><FaChevronCircleLeft /></span>
               <section className='div-center gap-5 overflow-x-scroll'>
                          {
                           ListingsItems.map((item, idx)=>{
@@ -28,6 +30,7 @@ const Listings = () => {
                          }
 
               </section>
+              <span><FaChevronCircleRight /></span>
          </section>
     </main>
   )
