@@ -19,6 +19,10 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     useEffect(() => {
         const carousel = carouselRef.current;
+        let scrollWidth;
+        if(carousel!=null) {
+            scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+        }
     
         const showHideIcons = () => {
         };
