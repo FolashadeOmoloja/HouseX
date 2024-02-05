@@ -21,19 +21,19 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     useEffect(() => {
         const carousel = carouselRef.current;
-
-        let scrollWidth;
-        if(carousel!=null) {
-            scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-        }
     
         const showHideIcons = () => {
+            const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+            // Assuming you have left and right icons as children of the carousel element
+            const leftIcon = carousel.previousElementSibling as HTMLElement;
+            const rightIcon = carousel.nextElementSibling as HTMLElement;
+      
         };
       }, []);
   
   return (
     <section className='mt-20 relative' ref={carouselRef}>
-    <button className='left-scroll'><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
+    <button ref={leftButton}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
       <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
                  {
                   items.map((item, idx)=>{
@@ -42,7 +42,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                  }
 
       </section>
-      <button className='right-scroll'><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
+      <button ref={rightButton}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
  </section>
   )
 }
