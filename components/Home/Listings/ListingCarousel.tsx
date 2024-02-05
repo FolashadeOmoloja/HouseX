@@ -30,7 +30,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
   
   return (
     <section className='mt-20 relative' ref={carouselRef}>
-    <button><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
+    <button className='left-scroll'><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
       <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
                  {
                   items.map((item, idx)=>{
@@ -39,7 +39,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                  }
 
       </section>
-      <button><FaChevronCircleRight className=' right-[-22px] slider-icon'/></button>
+      <button className='right-scroll'><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
  </section>
   )
 }
