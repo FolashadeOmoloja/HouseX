@@ -2,7 +2,12 @@ import ListingCarousel from './ListingCarousel'
 
 
 const ListingsItems = [
-  'circle2.jpg', 'circle1.jpg', 'circle3.jpg', 'circle2.jpg', 'circle1.jpg', 'circle3.jpg'
+  {img:'circle2.jpg', key: 0}, 
+  {img:'circle1.jpg', key: 1},
+  {img:'circle3.jpg', key: 2} ,
+  {img:'circle2.jpg', key: 3}, 
+  {img:'circle1.jpg', key: 4}, 
+  {img:'circle3.jpg', key: 5}
 ]
 
 const Listings = () => {
@@ -18,7 +23,7 @@ const Listings = () => {
             </div>
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
-         <ListingCarousel items={ListingsItems}/>
+         <ListingCarousel items={ListingsItems as unknown as [{img:'', key:number}]}/>
     </main>
   )
 }

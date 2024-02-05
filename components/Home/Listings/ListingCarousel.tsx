@@ -4,12 +4,14 @@ import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
 import { useEffect, useRef, useState } from 'react';
 
 interface CarouselProps {
-    items: string[]; 
+    items: [{img:'',key:number}]; 
   }
 
 const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
-    const carouselRef = useRef<HTMLDivElement>(null);
+    const carouselRef = useRef<HTMLDivElement>(document.createElement('div'));
+    const leftButton = useRef<HTMLButtonElement>(document.createElement('button'));
+    const rightButton = useRef<HTMLButtonElement>(document.createElement('button'));
     const [isDragStart, setIsDragStart] = useState(false);
     const [isDragging, setIsDragging] = useState(false);
     const [prevPageX, setPrevPageX] = useState(0);
@@ -19,6 +21,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     useEffect(() => {
         const carousel = carouselRef.current;
+
         let scrollWidth;
         if(carousel!=null) {
             scrollWidth = carousel.scrollWidth - carousel.clientWidth;
@@ -34,7 +37,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
       <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
                  {
                   items.map((item, idx)=>{
-                    return <ListingBox img={item} key={idx}/>
+                    return <ListingBox img={item.img} idx={idx}/>
                   })
                  }
 
