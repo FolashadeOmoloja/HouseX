@@ -1,6 +1,4 @@
-import { ListingBox } from '@/components/Elements/ShapedBox'
-import React from 'react'
-import { FaChevronCircleLeft, FaChevronCircleRight } from 'react-icons/fa'
+import ListingCarousel from './ListingCarousel'
 
 
 const ListingsItems = [
@@ -20,18 +18,7 @@ const Listings = () => {
             </div>
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
-         <section className='mt-20 relative'>
-            <button><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
-              <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
-                         {
-                          ListingsItems.map((item, idx)=>{
-                            return <ListingBox img={item} key={idx}/>
-                          })
-                         }
-
-              </section>
-              <button><FaChevronCircleRight className=' right-[-22px] slider-icon'/></button>
-         </section>
+         <ListingCarousel items={ListingsItems}/>
     </main>
   )
 }
