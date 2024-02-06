@@ -103,7 +103,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
   return (
     <section className='mt-20 relative' ref={carouselRef}>
     <button><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
-      <section className='div-center gap-5 overflow-x-scroll cursor-grab'>
+      <section className='div-center gap-4 overflow-x-hidden  cursor-grab'>
                  {
                   items.map((item, idx)=>{
                     return <ListingBox img={item.img} idx={idx}/>
