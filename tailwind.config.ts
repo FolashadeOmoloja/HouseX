@@ -19,6 +19,7 @@ const config: Config = {
         'xsm': '420px',
         'xmd': '500px',
         'slg': '870px',
+        'sxlg':'950px',
         'xslg': '1100px',
         'xlg': '1250px',
         'xxlg': '1350px'

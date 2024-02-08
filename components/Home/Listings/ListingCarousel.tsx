@@ -24,8 +24,10 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
     useEffect(() => {
         const carousel = carouselRef.current;
            
-        const dragStart = () =>{
+        const dragStart = (e:MouseEvent) =>{
             setIsDragStart(true)
+            setPrevPageX(e.pageX)
+            setPrevScrollLeft(carousel.scrollLeft)
         }
         const dragStop = () =>{
             setIsDragStart(false)
@@ -34,7 +36,8 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
             const dragging = (e:MouseEvent)=>{
                 if (!isDragStart) return;
                 e.preventDefault();
-                carousel.scrollLeft = e.pageX;
+                setPositionDiff(e.pageX - prevPageX)
+                carousel.scrollLeft = prevScrollLeft - positionDiff;
     }
         carousel.addEventListener('mousedown', dragStart);  
         carousel.addEventListener('mouseup', dragStop);
@@ -47,7 +50,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
             carousel.removeEventListener('mouseup', dragStop)
           };
     
-      }, [carouselRef, isDragStart]);
+      }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff]);
 
     //   console.log(isDragStart)
 
@@ -136,7 +139,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
   return (
     <section className='mt-20 relative' >
     <button><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
-      <section className={`flex gap-4 overflow-x-hidden  cursor-pointer whitespace-nowrap ${isDragStart ? 'cursor-grab': ''} `} ref={carouselRef}>
+      <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab': 'cursor-pointer'} `} ref={carouselRef}>
                  {
                   items.map((item, idx)=>{
                     return <ListingBox img={item.img} idx={idx}/>
