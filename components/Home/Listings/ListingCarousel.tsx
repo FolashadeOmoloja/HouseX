@@ -23,11 +23,18 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     useEffect(() => {
         const carousel = carouselRef.current;
+           
+        const dragStart = () =>{
+            setIsDragStart(true)
+        }
        
             const dragging = (e:MouseEvent)=>{
-                carousel.scrollLeft = e.pageX
+                if (!isDragStart) return;
+                e.preventDefault();
+                carousel.scrollLeft = e.pageX;
     }
-          carousel.addEventListener('mousemove', dragging);
+    carousel.addEventListener('mousedown', dragStart);  
+        carousel.addEventListener('mousemove', dragging);
 
 
           return () => {
