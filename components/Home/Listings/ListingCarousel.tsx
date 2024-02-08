@@ -155,7 +155,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
   return (
     <section className='mt-20 relative' >
     <button><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
-      <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab': 'cursor-pointer'} `} ref={carouselRef}>
+      <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab scroll-auto': 'cursor-pointer scroll-smooth '} `} ref={carouselRef}>
                  {
                   items.map((item, idx)=>{
                     return <ListingBox img={item.img} idx={item.key}/>
