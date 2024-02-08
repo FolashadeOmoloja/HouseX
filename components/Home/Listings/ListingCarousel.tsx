@@ -24,8 +24,6 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
 
-
-
         const updateIconVisibility = () => {
             setShowLeftIcon(carousel.scrollLeft !== 0);
             setShowRightIcon(carousel.scrollLeft !== scrollWidth);
@@ -37,9 +35,6 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                  setTimeout(()=>updateIconVisibility(),60 )
         }
 
-
-        
-        
         const rightButtonFunc = () =>{
             carousel.scrollLeft += firstImgWidth
             setTimeout(()=>updateIconVisibility(),60 )
@@ -47,6 +42,48 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
         leftButton.addEventListener('click',leftButtonFunc)
         rightButton.addEventListener('click',rightButtonFunc)
+
+        const autoSlide = () =>{
+        if (
+              carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 ||
+              carousel.scrollLeft <= 0
+            )
+              return;
+            setPositionDiff(Math.abs(positionDiff))
+                // getting difference value that needs to add or reduce from carousel left to take middle img center
+            const valDifference = firstImgWidth - positionDiff;
+            if (carousel.scrollLeft > prevScrollLeft) {
+              return (
+                (carousel.scrollLeft +=
+                  positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff),
+               setTimeout(()=>updateIconVisibility(),60 )
+              );
+            }
+      
+            carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+            setTimeout(()=>updateIconVisibility(),60 )
+          };
+    
+
+
+            //     const autoSlide = () => {
+
+            
+    //         setPositionDiff(Math.abs(positionDiff))
+    //         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 14 || 0;
+    //         const valDifference = firstImgWidth - positionDiff;
+      
+    //         if (carousel.scrollLeft > prevScrollLeft) {
+    //           return (
+    //             (carousel.scrollLeft +=
+    //               positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff),
+    //             showHideIcons()
+    //           );
+    //         }
+      
+    //         carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    //         showHideIcons();
+    //       };
 
            
         const dragStart = (e:MouseEvent | TouchEvent) =>{
@@ -57,6 +94,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         }
         const dragStop = () =>{
             setIsDragStart(false)
+            autoSlide();
         }
        
             const dragging = (e:MouseEvent | TouchEvent)=>{
