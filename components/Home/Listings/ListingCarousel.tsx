@@ -23,6 +23,15 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     useEffect(() => {
         const carousel = carouselRef.current;
+        const leftButton = carousel.previousElementSibling as HTMLElement;
+        const rightButton = carousel.nextElementSibling as HTMLElement;
+
+        const leftButtonFunc = () =>{
+                 console.log(leftButton)
+        }
+
+        leftButton.addEventListener('click',leftButtonFunc)
+
            
         const dragStart = (e:MouseEvent) =>{
             setIsDragStart(true)
@@ -45,6 +54,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
 
           return () => {
+            carousel.removeEventListener('click', leftButtonFunc);
             carousel.removeEventListener('mousemove', dragging);
             carousel.removeEventListener('mousedown', dragStart)
             carousel.removeEventListener('mouseup', dragStop)
@@ -52,7 +62,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
     
       }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff]);
 
-    //   console.log(isDragStart)
+    
 
     // useEffect(() => {
     //     const carousel = carouselRef.current;
