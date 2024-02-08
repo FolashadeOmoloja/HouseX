@@ -20,9 +20,6 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
 
 
-    // console.log(carousel)
-
-
 
     useEffect(() => {
         const carousel = carouselRef.current;
