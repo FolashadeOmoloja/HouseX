@@ -65,26 +65,6 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
           };
     
 
-
-            //     const autoSlide = () => {
-
-            
-    //         setPositionDiff(Math.abs(positionDiff))
-    //         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 14 || 0;
-    //         const valDifference = firstImgWidth - positionDiff;
-      
-    //         if (carousel.scrollLeft > prevScrollLeft) {
-    //           return (
-    //             (carousel.scrollLeft +=
-    //               positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff),
-    //             showHideIcons()
-    //           );
-    //         }
-      
-    //         carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    //         showHideIcons();
-    //       };
-
            
         const dragStart = (e:MouseEvent | TouchEvent) =>{
             setIsDragStart(true)
@@ -126,92 +106,6 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
           };
     
       }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff,showLeftIcon, showRightIcon]);
-
-
-
-    
-
-    // useEffect(() => {
-    //     const carousel = carouselRef.current;
-    
-    //     const showHideIcons = () => {
-    //         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-    //         // Assuming you have left and right icons as children of the carousel element
-    //         const leftIcon = carousel.firstElementChild as HTMLElement;
-    //         const rightIcon = carousel.lastElementChild as HTMLElement;
-    //         leftIcon.style.display = carousel.scrollLeft === 0 ? 'none' : 'block';
-    //         rightIcon.style.display = carousel.scrollLeft === scrollWidth ? 'none' : 'block';
-            
-    //     };
-
-    //     const autoSlide = () => {
-    //         if (
-    //           carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 ||
-    //           carousel.scrollLeft <= 0
-    //         )
-    //           return;
-            
-    //         setPositionDiff(Math.abs(positionDiff))
-    //         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 14 || 0;
-    //         const valDifference = firstImgWidth - positionDiff;
-      
-    //         if (carousel.scrollLeft > prevScrollLeft) {
-    //           return (
-    //             (carousel.scrollLeft +=
-    //               positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff),
-    //             showHideIcons()
-    //           );
-    //         }
-      
-    //         carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    //         showHideIcons();
-    //       };
-
-    //       const dragStart = (e) => {
-    //         setIsDragStart(true);
-    //         setPrevPageX(e.pageX || (e.touch && e.touches[0].pageX) || 0);
-    //         setPrevScrollLeft(carousel.scrollLeft);
-    //       };
-      
-    //       const dragging = (e) => {
-    //         if (!isDragStart) return;
-      
-    //         e.preventDefault();
-    //         setIsDragging(true);
-    //         carousel.classList.add('dragging');
-    //         setPositionDiff((e.pageX || (e.touches && e.touches[0].pageX) || 0) - prevPageX);
-    //         carousel.scrollLeft = prevScrollLeft - positionDiff;
-    //         showHideIcons();
-    //       };
-      
-    //       const dragStop = () => {
-    //         setIsDragStart(false);
-    //         carousel.classList.remove('dragging');
-      
-    //         if (!isDragging) return;
-    //         setIsDragging(false);
-    //         autoSlide();
-    //       };
-      
-    //       carousel.addEventListener('mousedown', dragStart);
-    //       carousel.addEventListener('touchstart', dragStart);
-      
-    //       document.addEventListener('mousemove', dragging);
-    //       carousel.addEventListener('touchmove', dragging);
-      
-    //       document.addEventListener('mouseup', dragStop);
-    //       carousel.addEventListener('touchend', dragStop);
-      
-    //       // Cleanup event listeners when the component unmounts
-    //       return () => {
-    //         carousel.removeEventListener('mousedown', dragStart);
-    //         carousel.removeEventListener('touchstart', dragStart);
-    //         document.removeEventListener('mousemove', dragging);
-    //         carousel.removeEventListener('touchmove', dragging);
-    //         document.removeEventListener('mouseup', dragStop);
-    //         carousel.removeEventListener('touchend', dragStop);
-    //       };
-    //   }, [carouselRef, prevPageX, prevScrollLeft, positionDiff, isDragStart, isDragging]);
   
   return (
     <section className='mt-20 relative' >
