@@ -39,9 +39,12 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
           return () => {
             carousel.removeEventListener('mousemove', dragging);
+            carousel.removeEventListener('mousedown', dragStart)
           };
     
-      }, [carouselRef]);
+      }, [carouselRef, isDragStart]);
+
+    //   console.log(isDragStart)
 
     // useEffect(() => {
     //     const carousel = carouselRef.current;
