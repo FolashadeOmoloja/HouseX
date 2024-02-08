@@ -7,7 +7,7 @@ const ListingsItems = [
   {img:'circle3.jpg', key: 2} ,
   {img:'circle2.jpg', key: 3}, 
   {img:'circle1.jpg', key: 4}, 
-  {img:'circle3.jpg', key: 5}
+  {img:'circle3.jpg', key: 5},
 ]
 
 const Listings = () => {

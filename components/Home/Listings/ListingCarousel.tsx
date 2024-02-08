@@ -25,12 +25,17 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const carousel = carouselRef.current;
         const leftButton = carousel.previousElementSibling as HTMLElement;
         const rightButton = carousel.nextElementSibling as HTMLElement;
+        const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
 
         const leftButtonFunc = () =>{
-                 console.log(leftButton)
+                 carousel.scrollLeft += -firstImgWidth
         }
+        const rightButtonFunc = () =>{
+            carousel.scrollLeft += firstImgWidth
+   }
 
         leftButton.addEventListener('click',leftButtonFunc)
+        rightButton.addEventListener('click',rightButtonFunc)
 
            
         const dragStart = (e:MouseEvent) =>{
@@ -54,7 +59,8 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
 
           return () => {
-            carousel.removeEventListener('click', leftButtonFunc);
+            leftButton.removeEventListener('click',leftButtonFunc)
+            rightButton.removeEventListener('click',rightButtonFunc)
             carousel.removeEventListener('mousemove', dragging);
             carousel.removeEventListener('mousedown', dragStart)
             carousel.removeEventListener('mouseup', dragStop)
@@ -152,7 +158,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
       <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab': 'cursor-pointer'} `} ref={carouselRef}>
                  {
                   items.map((item, idx)=>{
-                    return <ListingBox img={item.img} idx={idx}/>
+                    return <ListingBox img={item.img} idx={item.key}/>
                   })
                  }
 
