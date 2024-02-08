@@ -11,17 +11,12 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     const carouselRef = useRef<HTMLDivElement>(document.createElement('div'));
     const [isDragStart, setIsDragStart] = useState(false);
-    const [isDragging, setIsDragging] = useState(false);
     const [prevPageX, setPrevPageX] = useState(0);
     const [prevScrollLeft, setPrevScrollLeft] = useState(0);
     const [positionDiff, setPositionDiff] = useState(0);
     const [showLeftIcon, setShowLeftIcon] = useState(false)
     const [showRightIcon, setShowRightIcon] = useState(true)
    
-
-
-
-
     useEffect(() => {
         const carousel = carouselRef.current;
         const leftButton = carousel.previousElementSibling as HTMLElement;
@@ -54,38 +49,47 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         rightButton.addEventListener('click',rightButtonFunc)
 
            
-        const dragStart = (e:MouseEvent) =>{
+        const dragStart = (e:MouseEvent | TouchEvent) =>{
             setIsDragStart(true)
-            setPrevPageX(e.pageX)
+            const pageX = e instanceof MouseEvent ? e.pageX : e.touches[0].pageX;
+            setPrevPageX(pageX)
             setPrevScrollLeft(carousel.scrollLeft)
         }
         const dragStop = () =>{
             setIsDragStart(false)
         }
        
-            const dragging = (e:MouseEvent)=>{
+            const dragging = (e:MouseEvent | TouchEvent)=>{
                 if (!isDragStart) return;
                 e.preventDefault();
-                setPositionDiff(e.pageX - prevPageX)
+                const pageX = e instanceof MouseEvent ? e.pageX : e.touches[0].pageX;
+                setPositionDiff(pageX - prevPageX)
                 carousel.scrollLeft = prevScrollLeft - positionDiff;
+                setTimeout(()=>updateIconVisibility(),60 )
     }
         carousel.addEventListener('mousedown', dragStart);  
+        carousel.addEventListener('touchstart', dragStart);
         carousel.addEventListener('mouseup', dragStop);
+        carousel.addEventListener('mouseleave', dragStop);
+        carousel.addEventListener('touchend', dragStop);
         carousel.addEventListener('mousemove', dragging);
+        carousel.addEventListener('touchmove', dragging);
 
 
           return () => {
             leftButton.removeEventListener('click',leftButtonFunc)
             rightButton.removeEventListener('click',rightButtonFunc)
             carousel.removeEventListener('mousemove', dragging);
+            carousel.removeEventListener('touchmove', dragging);
             carousel.removeEventListener('mousedown', dragStart)
             carousel.removeEventListener('mouseup', dragStop)
+            carousel.removeEventListener('mouseleave', dragStop)
+            carousel.removeEventListener('touchend', dragStop);
           };
     
       }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff,showLeftIcon, showRightIcon]);
 
-      console.log(showLeftIcon)
-      console.log(showRightIcon)
+
 
     
 
@@ -173,7 +177,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
   
   return (
     <section className='mt-20 relative' >
-    <button className={`${showLeftIcon?'': 'hidden'}`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
+    <button className={`${showLeftIcon?'': 'opacity-0'}`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
       <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab scroll-auto': 'cursor-pointer scroll-smooth '} `} ref={carouselRef}>
                  {
                   items.map((item, idx)=>{
@@ -182,7 +186,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                  }
 
       </section>
-      <button className={`${showRightIcon?'': 'hidden'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
+      <button className={`${showRightIcon?'': 'opacity-0'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
  </section>
   )
 }
