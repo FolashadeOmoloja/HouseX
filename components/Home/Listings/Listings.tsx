@@ -25,12 +25,13 @@ const Listings = () => {
          </section>
          <ListingCarousel items={ListingsItems as unknown as [{img:'', key:number}]}/>
          <div className='flex gap-5 overflow-x-scroll'>
-              <div className='border-2 border-gray-500 rounded w-80 h-80'></div>
-              <div className='border-2 border-gray-500 rounded w-80 h-80'></div>
-              <div className='border-2 border-gray-500 rounded w-80 h-80'></div>
-              <div className='border-2 border-gray-500 rounded w-80 h-80'></div>
-              <div className='border-2 border-gray-500 rounded w-80 h-80'></div>
-              <div className='border-2 border-gray-500 rounded w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
+              <div className='border-2 border-gray-500 rounded min-w-80 h-80'></div>
          </div>
     </main>
   )
