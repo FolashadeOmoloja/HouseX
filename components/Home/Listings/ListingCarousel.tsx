@@ -15,8 +15,9 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
     const [prevPageX, setPrevPageX] = useState(0);
     const [prevScrollLeft, setPrevScrollLeft] = useState(0);
     const [positionDiff, setPositionDiff] = useState(0);
-    const [showLeftIcon, setShowLeftIcon] = useState(true)
+    const [showLeftIcon, setShowLeftIcon] = useState(false)
     const [showRightIcon, setShowRightIcon] = useState(true)
+   
 
 
 
@@ -29,23 +30,24 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
 
 
-        // if(carousel.scrollLeft == 0){
-        //     setShowLeftIcon(false)
-        //  } else if(carousel.scrollLeft == scrollWidth){
-        //     setShowRightIcon(false)
-        //  }
-   
+
+        const updateIconVisibility = () => {
+            setShowLeftIcon(carousel.scrollLeft !== 0);
+            setShowRightIcon(carousel.scrollLeft !== scrollWidth);
+        };
 
 
         const leftButtonFunc = () =>{
                  carousel.scrollLeft += -firstImgWidth
-                    leftButton.style.display = carousel.scrollLeft === 0 ? 'none' : 'block';
-    
+                 setTimeout(()=>updateIconVisibility(),60 )
         }
+
+
+        
+        
         const rightButtonFunc = () =>{
             carousel.scrollLeft += firstImgWidth
-            rightButton.style.display = carousel.scrollLeft === scrollWidth ? 'none' : 'block';
-
+            setTimeout(()=>updateIconVisibility(),60 )
    }
 
         leftButton.addEventListener('click',leftButtonFunc)
@@ -80,7 +82,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
             carousel.removeEventListener('mouseup', dragStop)
           };
     
-      }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff, showLeftIcon, showRightIcon]);
+      }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff,showLeftIcon, showRightIcon]);
 
       console.log(showLeftIcon)
       console.log(showRightIcon)
@@ -171,7 +173,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
   
   return (
     <section className='mt-20 relative' >
-    <button ><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
+    <button className={`${showLeftIcon?'': 'hidden'}`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
       <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab scroll-auto': 'cursor-pointer scroll-smooth '} `} ref={carouselRef}>
                  {
                   items.map((item, idx)=>{
@@ -180,7 +182,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                  }
 
       </section>
-      <button ><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
+      <button className={`${showRightIcon?'': 'hidden'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
  </section>
   )
 }
