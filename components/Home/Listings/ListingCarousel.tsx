@@ -10,6 +10,7 @@ interface CarouselProps {
 const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
     const carouselRef = useRef<HTMLDivElement>(document.createElement('div'));
+    const radioRef = useRef<HTMLDivElement>(document.createElement('div'));
     const [isDragStart, setIsDragStart] = useState(false);
     const [prevPageX, setPrevPageX] = useState(0);
     const [prevScrollLeft, setPrevScrollLeft] = useState(0);
@@ -20,16 +21,17 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
    
     useEffect(() => {
         const carousel = carouselRef.current;
+        const radioDiv = radioRef.current
         const leftButton = carousel.previousElementSibling as HTMLElement;
         const leftButtonChild =leftButton.firstChild as HTMLElement
         const rightButton = carousel.nextElementSibling as HTMLElement;
+        const radio = carousel.nextElementSibling as HTMLElement;
         const rightButtonChild = rightButton.firstChild as HTMLElement
         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
 
-        console.log(rightButton)
+        console.log(radio)
 
-        console.log(firstImgWidth)
 
         const updateIconVisibility = () => {
             setShowLeftIcon(carousel.scrollLeft !== 0);
@@ -129,10 +131,10 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
       </section>
       <button className={`${showRightIcon?'': 'opacity-0'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
-      <section className="  div-center gap-1 w-full">
+      <section className="  div-center gap-1 w-full mt-10" ref={radioRef}>
       {
                   items.map((item, idx)=>{
-                    return  <div className="w-[10px] h-[10px] rounded-full bg-[#c3d4cc]" key={idx}></div>
+                    return  <div className="w-[25px] h-[10px] rounded-full bg-[#c3d4cc]" key={idx}></div>
                   })
                  } 
       </section>
