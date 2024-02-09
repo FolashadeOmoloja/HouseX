@@ -40,13 +40,10 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
         const leftButtonFunc = () =>{
                  carousel.scrollLeft += -firstImgWidth
-                 // Add the active class
                  leftButtonChild.classList.add('slider-icon-active');
-             
-                 // Remove the active class after 2 seconds
                  setTimeout(() => {
                      leftButtonChild.classList.remove('slider-icon-active');
-    }, 2000);
+                }, 100);
                  setTimeout(()=>updateIconVisibility(),60 )
         }
 
