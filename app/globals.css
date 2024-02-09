@@ -47,7 +47,7 @@
   }
 
   .slider-icon{
-    @apply text-[#7e9999] absolute top-1/2 text-[38px] z-10  bg-white transition-all hover:text-[#c3d4cc] cursor-pointer translate-y-[-]
+    @apply text-[#7e9999] absolute top-1/2 text-[38px] z-10  bg-white transition-all hover:text-[#c3d4cc] cursor-pointer
   }
 }
 
@@ -107,7 +107,7 @@
   border-radius: 50%;
 }
 
-.slider-icon.active{
+.slider-icon-active{
 transform: translateY(-50%) scale(0.9);
 }
 

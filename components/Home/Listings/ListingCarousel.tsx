@@ -16,10 +16,16 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
     const [positionDiff, setPositionDiff] = useState(0);
     const [showLeftIcon, setShowLeftIcon] = useState(false)
     const [showRightIcon, setShowRightIcon] = useState(true)
+    const [leftActive, setLeftActive] = useState(false)
+    const [rightActive, setRightActive] = useState(false)
+
+
+   
    
     useEffect(() => {
         const carousel = carouselRef.current;
         const leftButton = carousel.previousElementSibling as HTMLElement;
+        const leftButtonChild =leftButton.firstChild as HTMLElement
         const rightButton = carousel.nextElementSibling as HTMLElement;
         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
@@ -28,10 +34,19 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
             setShowLeftIcon(carousel.scrollLeft !== 0);
             setShowRightIcon(carousel.scrollLeft !== scrollWidth);
         };
+        
+    
 
 
         const leftButtonFunc = () =>{
                  carousel.scrollLeft += -firstImgWidth
+                 // Add the active class
+                 leftButtonChild.classList.add('slider-icon-active');
+             
+                 // Remove the active class after 2 seconds
+                 setTimeout(() => {
+                     leftButtonChild.classList.remove('slider-icon-active');
+    }, 2000);
                  setTimeout(()=>updateIconVisibility(),60 )
         }
 
@@ -106,7 +121,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
           };
     
       }, [carouselRef, isDragStart, prevPageX, prevScrollLeft, positionDiff,showLeftIcon, showRightIcon]);
-  
+
   return (
     <section className='mt-20 relative' >
     <button className={`${showLeftIcon?'': 'opacity-0'}`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
