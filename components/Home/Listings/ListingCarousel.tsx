@@ -16,11 +16,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
     const [positionDiff, setPositionDiff] = useState(0);
     const [showLeftIcon, setShowLeftIcon] = useState(false)
     const [showRightIcon, setShowRightIcon] = useState(true)
-    const [leftActive, setLeftActive] = useState(false)
-    const [rightActive, setRightActive] = useState(false)
 
-
-   
    
     useEffect(() => {
         const carousel = carouselRef.current;
@@ -30,6 +26,8 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const rightButtonChild = rightButton.firstChild as HTMLElement
         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+
+        console.log(firstImgWidth)
 
         const updateIconVisibility = () => {
             setShowLeftIcon(carousel.scrollLeft !== 0);
@@ -45,6 +43,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
         const rightButtonFunc = () =>{
             carousel.scrollLeft += firstImgWidth
+            rightButtonChild.classList.add('slider-icon-active');
             setTimeout(() => { rightButtonChild.classList.remove('slider-icon-active');}, 100);
             setTimeout(()=>updateIconVisibility(),60 )
    }
