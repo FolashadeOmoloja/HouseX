@@ -27,6 +27,8 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
 
+        console.log(rightButton)
+
         console.log(firstImgWidth)
 
         const updateIconVisibility = () => {
@@ -127,6 +129,13 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
       </section>
       <button className={`${showRightIcon?'': 'opacity-0'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
+      <section className="  div-center gap-1 w-full">
+      {
+                  items.map((item, idx)=>{
+                    return  <div className="w-[10px] h-[10px] rounded-full bg-[#c3d4cc]" key={idx}></div>
+                  })
+                 } 
+      </section>
  </section>
   )
 }
