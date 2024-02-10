@@ -1,3 +1,4 @@
+import Login from '../Header/Login'
 import ListingCarousel from './ListingCarousel'
 
 
@@ -24,6 +25,9 @@ const Listings = () => {
             <p className=''>With over 17,000 satisfied customers, <br /> we have curated the best property listings for you <br /> to ensure you get the value for your money</p>
          </section>
          <ListingCarousel items={ListingsItems as unknown as [{img:'', key:number}]}/>
+         <div className=" mt-20">
+              <Login display="hidden" cta="Marketplace" justifyEnd={false} width="md:w-[300px] w-full"/>
+        </div>
     </main>
   )
 }

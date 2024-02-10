@@ -3,7 +3,7 @@ import { MdCopyright } from "react-icons/md";
 
 const Footer = () => {
   return (
-     <footer className='bg-[#f3f6fd] px-4 mt-24 text-[#4b5456] pt-20'>
+     <footer className='bg-[#f3f6fd] px-4  text-[#4b5456] pt-20'>
             <main className='bg-white rounded-3xl px-2.5 md:px-20 md:py-10 py-2.5 mx-auto md:h-[400px] flex justify-between relative max-md:flex-col'>
                 <section className='flex flex-col h-full justify-between basis-1/2 max-md:mb-10'>
                       <div>
