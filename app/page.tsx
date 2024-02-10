@@ -6,6 +6,7 @@ import Listings from '@/components/Home/Listings/Listings'
 import Offer from '@/components/Home/Offer/Offer'
 
 
+
 export default function Home() {
   return (
     <main className="">
@@ -14,7 +15,7 @@ export default function Home() {
         </section>
         <About/> 
         <Features/>
-        <Listings/>
+        {/* <Listings/> */}
         <Offer/>
         <Footer/>  
     </main>
