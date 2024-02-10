@@ -25,12 +25,25 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const leftButton = carousel.previousElementSibling as HTMLElement;
         const leftButtonChild =leftButton.firstChild as HTMLElement
         const rightButton = carousel.nextElementSibling as HTMLElement;
-        const radio = carousel.nextElementSibling as HTMLElement;
         const rightButtonChild = rightButton.firstChild as HTMLElement
         const firstImgWidth = carousel.firstElementChild?.clientWidth as number + 16
         const scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+        const radioDivArray = radioDiv.childNodes
 
-        console.log(radio)
+
+        radioDivArray.forEach((_item,idx) => {
+         if(carousel.scrollLeft == 0){
+           const Item  = _item as HTMLElement
+           console.log(Item)
+
+         }
+        });
+
+       
+
+        
+
+
 
 
         const updateIconVisibility = () => {
@@ -124,7 +137,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
     <button className={`${showLeftIcon?'': 'opacity-0'}`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
       <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab scroll-auto': 'cursor-pointer scroll-smooth '} `} ref={carouselRef}>
                  {
-                  items.map((item, idx)=>{
+                  items.map((item, _idx)=>{
                     return <ListingBox img={item.img} idx={item.key}/>
                   })
                  }
@@ -133,7 +146,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
       <button className={`${showRightIcon?'': 'opacity-0'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
       <section className="  div-center gap-1 w-full mt-10" ref={radioRef}>
       {
-                  items.map((item, idx)=>{
+                  items.map((_item, idx)=>{
                     return  <div className="w-[25px] h-[10px] rounded-full bg-[#c3d4cc]" key={idx}></div>
                   })
                  } 
