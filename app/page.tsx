@@ -3,6 +3,7 @@ import Features from '@/components/Home/Features/Features'
 import Footer from '@/components/Home/Footer/Footer'
 import Header from '@/components/Home/Header/Header'
 import Listings from '@/components/Home/Listings/Listings'
+import Offer from '@/components/Home/Offer/Offer'
 
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <About/> 
         <Features/>
         <Listings/>
+        <Offer/>
         <Footer/>  
     </main>
   )
