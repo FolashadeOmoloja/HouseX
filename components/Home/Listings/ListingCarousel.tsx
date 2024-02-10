@@ -35,9 +35,23 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
             const Item = _item as HTMLElement;
             const itemWidth = Item.offsetWidth;
             const scrollPosition = carousel.scrollLeft;
+            const scrollWidthDiv = carousel.scrollWidth/6
         
-            // Determine the index of the pagination element based on scroll position
-            const pageIndex = Math.floor((scrollPosition + itemWidth / 2) / itemWidth);
+            let pageIndex;
+
+            if (scrollPosition >= 0 &&  scrollPosition <= scrollWidthDiv * 1) {
+                pageIndex = 0; 
+            } else  if  (scrollPosition > scrollWidthDiv * 1 && scrollPosition <= scrollWidthDiv * 2  ){
+                pageIndex = 1; 
+            } else if (scrollPosition > scrollWidthDiv * 2 && scrollPosition <= scrollWidthDiv * 3  ){
+                pageIndex = 2;
+            } else if (scrollPosition > scrollWidthDiv * 3 && scrollPosition <= scrollWidthDiv * 4  ){
+                pageIndex = 3;
+            } else if (scrollPosition > scrollWidthDiv * 4 && scrollPosition <= scrollWidthDiv * 5  ){
+                pageIndex = 4;
+            }  else if (scrollPosition > scrollWidthDiv * 5 && scrollPosition <= scrollWidthDiv * 6  ){
+                pageIndex = 5;
+            }
         
             // Add the appropriate background color based on the index
             Item.classList.toggle('bg-[#7e9999]', idx === pageIndex);
@@ -64,6 +78,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
             rightButtonChild.classList.add('slider-icon-active');
             setTimeout(() => { rightButtonChild.classList.remove('slider-icon-active');}, 100);
             setTimeout(()=>updateIconVisibility(),60 )
+            console.log(scrollWidth)
    }
 
         leftButton.addEventListener('click',leftButtonFunc)
