@@ -15,7 +15,7 @@ export default function Home() {
         </section>
         <About/> 
         <Features/>
-        {/* <Listings/> */}
+        <Listings/>
         <Offer/>
         <Footer/>  
     </main>
