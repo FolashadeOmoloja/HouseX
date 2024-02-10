@@ -147,7 +147,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
   return (
     <section className='mt-20 relative' >
-    <button className={`${showLeftIcon?'': 'opacity-0'}`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
+    <button className={`${showLeftIcon?'': 'opacity-0'}  max-sm:hidden`}><FaChevronCircleLeft className=' left-[-22px]  slider-icon  ' /></button>
       <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab scroll-auto': 'cursor-pointer scroll-smooth '} `} ref={carouselRef}>
                  {
                   items.map((item, _idx)=>{
@@ -156,7 +156,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                  }
 
       </section>
-      <button className={`${showRightIcon?'': 'opacity-0'}`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
+      <button className={`${showRightIcon?'': 'opacity-0'} max-sm:hidden`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
       <section className="  div-center gap-1 w-full mt-10" ref={radioRef}>
       {
                   items.map((_item, idx)=>{

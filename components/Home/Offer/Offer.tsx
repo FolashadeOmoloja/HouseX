@@ -38,8 +38,8 @@ const Offer = () => {
   return (
     <section className=" maxWidthWrapper bg-[#f3f6fd] text-[#4b5456] max-xlg:text-center">
                  <h2 className='text-[40px] max-slg:text-3xl mb-5 text-center '>What we have to offer </h2>
-                 <p className="text-center mb-16">Choosing us as your real estate go to comes with amazing benefits, this is what makes us stand out as we strive to offer you the very best.</p>
-         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                 <p className="text-center mb-10 max-md:mb-6 max max-sm:text-sm">Choosing us as your real estate go to comes with amazing benefits, <br className="max-sm:hidden" /> this is what makes us stand out as we strive to offer you the very best.</p>
+         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               {
                 items.map((item,index)=>{
                     return(
