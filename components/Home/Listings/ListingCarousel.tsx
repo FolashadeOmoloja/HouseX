@@ -40,26 +40,18 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
 
             if (scrollPosition >= 0 &&  scrollPosition <= scrollWidthDiv * 1) {
                 pageIndex = 0; 
-            } 
-            
-            else if (scrollPosition > scrollWidthDiv * 5 || scrollPosition == scrollWidth){
+            } else if (scrollPosition > scrollWidthDiv * 5 || scrollPosition == scrollWidth){
                 pageIndex = 5;
-            }
-            else  if  (scrollPosition > scrollWidthDiv * 1 && scrollPosition <= scrollWidthDiv * 2  ){
+            } else  if  (scrollPosition > scrollWidthDiv * 1 && scrollPosition <= scrollWidthDiv * 2  ){
                 pageIndex = 1; 
-            }
-            else if (scrollPosition > scrollWidthDiv * 2 && scrollPosition <= scrollWidthDiv * 3  ){
+            } else if (scrollPosition > scrollWidthDiv * 2 && scrollPosition <= scrollWidthDiv * 3  ){
                 pageIndex = 2;
             } else if (scrollPosition > scrollWidthDiv * 3 && scrollPosition <= scrollWidthDiv * 4  ){
                 pageIndex = 3;
-                console.log(scrollPosition)
-                console.log(scrollWidthDiv * 4)
-                console.log(scrollWidth)
             } else if (scrollPosition > scrollWidthDiv * 4 && scrollPosition <= scrollWidthDiv * 5  ){
                 pageIndex = 4;
             } 
-        
-            // Add the appropriate background color based on the index
+    
             Item.classList.toggle('bg-[#7e9999]', idx === pageIndex);
             Item.classList.toggle('bg-[#c3d4cc]', idx !== pageIndex);
         });
