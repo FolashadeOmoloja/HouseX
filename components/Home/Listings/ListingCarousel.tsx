@@ -31,20 +31,21 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
         const radioDivArray = radioDiv.childNodes
 
 
-        radioDivArray.forEach((_item,idx) => {
-         if(carousel.scrollLeft == 0){
-           const Item  = _item as HTMLElement
-           console.log(Item)
-
-         }
+        radioDivArray.forEach((_item, idx) => {
+            const Item = _item as HTMLElement;
+            const itemWidth = Item.offsetWidth;
+            const scrollPosition = carousel.scrollLeft;
+        
+            // Determine the index of the pagination element based on scroll position
+            const pageIndex = Math.floor((scrollPosition + itemWidth / 2) / itemWidth);
+        
+            // Add the appropriate background color based on the index
+            Item.classList.toggle('bg-[#7e9999]', idx === pageIndex);
+            Item.classList.toggle('bg-[#c3d4cc]', idx !== pageIndex);
         });
-
-       
-
         
 
-
-
+    
 
         const updateIconVisibility = () => {
             setShowLeftIcon(carousel.scrollLeft !== 0);
@@ -147,7 +148,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
       <section className="  div-center gap-1 w-full mt-10" ref={radioRef}>
       {
                   items.map((_item, idx)=>{
-                    return  <div className="w-[25px] h-[10px] rounded-full bg-[#c3d4cc]" key={idx}></div>
+                    return  <div className="w-[25px] h-[10px] rounded-full " key={idx}></div>
                   })
                  } 
       </section>
