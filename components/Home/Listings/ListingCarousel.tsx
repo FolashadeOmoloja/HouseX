@@ -123,7 +123,12 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                 carousel.scrollLeft = prevScrollLeft - positionDiff;
                 setTimeout(()=>updateIconVisibility(),60 )
     }
-        carousel.addEventListener('mousedown', dragStart);  
+        carousel.addEventListener('mousedown', dragStart);   
+
+        
+
+
+
         carousel.addEventListener('touchstart', dragStart);
         carousel.addEventListener('mouseup', dragStop);
         carousel.addEventListener('mouseleave', dragStop);
