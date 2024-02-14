@@ -6,14 +6,14 @@ const NavBar = () => {
         <ul>
             <li>Home</li>
             <li>Church</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>very soon</li>
+            <li>very soon</li>
+            <li>very soon</li>
+            <li>very soon</li>
+            <li>very soon</li>
+            <li>very soon</li>
+            <li>very soon</li>
+            <li>very soon</li>
         </ul>
     </nav>
   )
