@@ -156,7 +156,11 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
       <section className={`flex gap-4 overflow-x-hidden   whitespace-nowrap ${isDragStart ? 'cursor-grab scroll-auto': 'cursor-pointer scroll-smooth '} `} ref={carouselRef}>
                  {
                   items.map((item, _idx)=>{
-                    return <ListingBox img={item.img} idx={item.key}/>
+                    return (
+                      <div className='h-[400px] sxlg:min-w-[32.5%] sm:min-w-[50%] min-w-[100%]  rounded-[10px]' key={_idx} >
+                           <ListingBox img={item.img} />
+                      </div>
+                    )
                   })
                  }
 
@@ -164,9 +168,8 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
       <button className={`${showRightIcon?'': 'opacity-0'} max-sm:hidden`}><FaChevronCircleRight className=' right-[-22px] slider-icon '/></button>
       <section className="  div-center gap-1 w-full mt-10" ref={radioRef}>
       {
-                  items.map((_item, idx)=>{
-                    console.log(idx)
-                    return  <div className="w-[25px] h-[10px] rounded-full " key={idx}></div>
+                  items.map((_item, _idx)=>{
+                    return  <div className="w-[25px] h-[10px] rounded-full " key={_idx}></div>
                   })
                  } 
       </section>
