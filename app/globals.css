@@ -3,31 +3,112 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+
+}
+
+@layer components{
+  .headersection-gradient{
+   @apply bg-gradient-to-r from-[#7e9999] to-[#c3d4cc]
+  }
+  .div-center{
+    @apply flex items-center justify-center
+  }
+  .maxWidthWrapper{
+    @apply px-2.5 md:px-20 py-20 max-xxlg:p-[52px] max-md:p-8 max-xsm:p-4
+  }
+  .list-item{
+    @apply pt-[3px] hover:text-[#E9EDEC] transition ease-in 
+  }
+
+  .nav{
+    @apply border-b border-[#c3d4cc] h-[70px] p-0 m-0  flex items-center
+  }
+
+  .maxmin-input{
+   @apply w-[80px] border-[#7e9999] border outline-none
+  }
+
+  .slider-search{
+    @apply max-w-14 max-slg:max-w-[580px] max-sm:max-w-[400px] max-xxsm:max-w-[320px]
+  }
+
+  .features-switch{
+    @apply xslg:pl-3 border-[#7e9999] xlg:border-l-4 text-[#7e9999] cursor-pointer transition  max-xlg:border max-slg:text-sm  max-xlg:px-4 max-xlg:py-2 max-xlg:border-none}
+    
+    .features-switch-active{
+      @apply bg-[#7e9999]   text-[#f3f6fd] max-xlg:rounded-3xl  transition-all
+    }
+  .features-header{
+    @apply flex items-center gap-3 mb-2 cursor-pointer max-xlg:justify-center
+  }
+
+  .slider-icon{
+    @apply text-[#7e9999] absolute top-1/2 text-[38px] z-10  bg-white transition-all hover:text-[#c3d4cc] cursor-pointer
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+.box-shadow{
+  box-shadow: 0px 2px 0px rgba(126, 153, 153, 0.8);
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.background-position{
+  background-position: right -320px top 0;
 }
+
+.slanted-div:before {
+  content: '';
+  position: absolute;
+  top: -2px; right: -2px;
+  border-top: 3px solid white;
+  border-right:3px solid white;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+}
+
+.slanted-div2 {
+  position: absolute;
+  bottom: -2px; left: -2px;
+  border-bottom: 3px solid white;
+  border-left:3px solid white;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+}
+
+.ptSerifFont{
+  font-family: var(--font-ptSerif);
+}
+
+.right-angle-bottom-triangle {
+  width: 0;
+  height: 0;
+  border-left: 150px solid transparent;
+  border-bottom: 150px solid #f3f6fd; 
+
+
+}
+
+.right-angle-triangle {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+ rotate: 180deg;
+
+}
+.slider-icon{
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+  border-radius: 50%;
+}
+
+.slider-icon-active{
+transform: translateY(-50%) scale(0.9);
+}
+
+
