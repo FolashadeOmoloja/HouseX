@@ -159,6 +159,7 @@ const ListingCarousel:React.FC<CarouselProps> = ({items}) => {
                     return (
                       <div className='h-[400px] sxlg:min-w-[32.5%] sm:min-w-[50%] min-w-[100%]  rounded-[10px]' key={_idx} >
                            <ListingBox img={item.img} />
+                           
                       </div>
                     )
                   })
